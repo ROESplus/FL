@@ -1,0 +1,113 @@
+{
+  "id": "lesson-02",
+  "title": "Storing and Retrieving Data Smartly with Variables",
+  "titleAr": "تخزين البيانات واسترجاعها بذكاء باستخدام المتغيرات",
+  "skill": "Create and use variables with dynamic typing",
+  "skillAr": "إنشاء واستخدام المتغيرات مع التحديد الديناميكي للأنواع",
+  "phase": 1,
+  "phaseTitle": "Fundamentals",
+  "phaseTitleAr": "الأساسيات",
+  "prerequisites": ["lesson-01"],
+  "sections": [
+    {
+      "content": "Before variables, every time you wanted to use a value, you had to type it out. Imagine calculating a circle's area without storing the radius: you'd type `3.14 * 5 * 5`, then `3.14 * 10 * 10`. If you wanted to change the precision of Pi, you'd have to edit every single line.\n\n<strong>After variables:</strong>\nYou create a named container. `pi = 3.14`. Now, you just use `pi` everywhere. Change it once, and every calculation updates automatically.\n\nIn Python, creating a variable is beautifully simple: just assign a value with `=`. No need to declare the type (like `int` or `string`)—Python figures it out automatically. This is called <strong>Dynamic Typing</strong>.",
+      "contentAr": "قبل المتغيرات، في كل مرة تريد فيها استخدام قيمة، كنت تضطر لكتابتها يدوياً. تخيل حساب مساحة دائرة دون تخزين نصف القطر: ستكتب `3.14 * 5 * 5`، ثم `3.14 * 10 * 10`. إذا أردت تغيير دقة قيمة باي، سيتعين عليك تعديل كل سطر على حدة.\n\n<strong>بعد استخدام المتغيرات:</strong>\nأنت تنشئ حاوية مسماة. `pi = 3.14`. الآن، تستخدم `pi` في كل مكان. غيّرها مرة واحدة، وسيتحدث كل حساب تلقائياً.\n\nفي Python، إنشاء المتغير بسيط بشكل رائع: فقط اسند القيمة باستخدام `=`. لا حاجة لتحديد النوع (مثل `int` أو `string`)، Python تكتشف ذلك تلقائياً. هذا ما يُسمى <strong>التحديد الديناميكي للأنواع (Dynamic Typing)</strong>.",
+      "diagram": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 200'%3E%3Crect width='600' height='200' fill='%231e293b' rx='12'/%3E%3Ctext x='300' y='30' text-anchor='middle' fill='%2394a3b8' font-size='16' font-family='sans-serif'%3EVariable as a Container%3C/text%3E%3Crect x='150' y='60' width='100' height='100' fill='%23334155' rx='8' stroke='%2322c55e' stroke-width='2'/%3E%3Ctext x='200' y='115' text-anchor='middle' fill='%2322c55e' font-size='20' font-family='monospace' font-weight='bold'%3Epi%3C/text%3E%3Cpath d='M 250 110 L 350 110' stroke='%2394a3b8' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Crect x='350' y='80' width='100' height='60' fill='%23475569' rx='8'/%3E%3Ctext x='400' y='115' text-anchor='middle' fill='%23f8fafc' font-size='18' font-family='monospace'%3E3.14%3C/text%3E%3Cdefs%3E%3Cmarker id='arrow' markerWidth='10' markerHeight='10' refX='8' refY='3' orient='auto'%3E%3Cpath d='M0,0 L0,6 L9,3 z' fill='%2394a3b8'/%3E%3C/marker%3E%3C/defs%3E%3C/svg%3E",
+      "code": "# Creating variables - no type declaration needed!\nname = \"Python\"\nversion = 3.12\nis_awesome = True\n\n# Python automatically knows the types:\nprint(type(name))      # <class 'str'>\nprint(type(version))   # <class 'float'>\n\n# You can reassign to different types (dynamic typing!):\nx = 10        # x is an integer\nx = \"hello\"   # now x is a string - no error!\nprint(x)",
+      "reminder": "Python variable names must start with a letter or underscore, can contain letters, numbers, and underscores, and are case-sensitive (myVar is different from myvar).",
+      "reminderAr": "أسماء متغيرات Python يجب أن تبدأ بحرف أو شرطة سفلية، ويمكن أن تحتوي على أحرف، أرقام، وشرطات سفلية، وهي حساسة لحالة الأحرف (myVar تختلف عن myvar).",
+      "notes": [
+        { "term": "Dynamic Typing", "description": "Python determines variable types at runtime. You don't declare types explicitly." },
+        { "term": "Snake Case", "description": "Python's naming convention: use lowercase with underscores (my_variable, not myVariable)." }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "title": "Example 1: Multiple Assignment",
+      "titleAr": "مثال 1: الإسناد المتعدد",
+      "description": "Python lets you assign multiple variables in one elegant line.",
+      "descriptionAr": "تتيح لك Python إسناد قيم متعددة لمتغيرات في سطر واحد أنيق.",
+      "code": "x, y, z = 1, 2, 3\nprint(x, y, z)  # 1 2 3\n\n# Swapping values without a temporary variable!\na = 5\nb = 10\na, b = b, a\nprint(a, b)  # 10 5"
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "What does 'dynamic typing' mean in Python?",
+      "promptAr": "ماذا يعني 'التحديد الديناميكي للأنواع' في Python؟",
+      "options": [
+        "Variables can change their names",
+        "Python determines variable types automatically at runtime",
+        "Variables are deleted automatically",
+        "You must declare types before using variables"
+      ],
+      "correct": 1,
+      "explanation": "Dynamic typing means Python figures out the type when you assign a value. You don't need to declare 'int x = 5', just 'x = 5'.",
+      "explanationAr": "التحديد الديناميكي يعني أن Python تكتشف النوع عند إسناد القيمة. لا تحتاج لكتابة 'int x = 5'، فقط 'x = 5'.",
+      "weaknessTip": "Dynamic = automatic type detection. Static = manual type declaration (like C++).",
+      "weaknessTipAr": "ديناميكي = اكتشاف تلقائي للنوع. ثابت = تحديد يدوي للنوع (مثل C++)."
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "Complete the code to swap two variables without a temporary variable:",
+      "promptAr": "أكمل الكود لتبديل متغيرين دون متغير مؤقت:",
+      "code": "a = 5\nb = 10\na, b = _____, _____\nprint(a, b)  # Should print: 10 5",
+      "answers": ["b", "a"],
+      "explanation": "Python's multiple assignment lets you swap values elegantly: a, b = b, a",
+      "explanationAr": "الإسناد المتعدد في Python يتيح لك تبديل القيم بأناقة: a, b = b, a",
+      "weaknessTip": "This is one of Python's elegant features—no temp variable needed!",
+      "weaknessTipAr": "هذه إحدى ميزات Python الأنيقة—لا حاجة لمتغير مؤقت!"
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which is a valid Python variable name?",
+      "promptAr": "أي مما يلي يعتبر اسم متغير صالح في Python؟",
+      "options": [
+        "2nd_place",
+        "my-variable",
+        "_private_var",
+        "class"
+      ],
+      "correct": 2,
+      "explanation": "Variable names can start with an underscore. They can't start with numbers, contain hyphens, or be reserved words like 'class'.",
+      "explanationAr": "يمكن لأسماء المتغيرات أن تبدأ بشرطة سفلية. لا يمكن أن تبدأ بأرقام، أو تحتوي على شرطات عادية، أو تكون كلمات محجوزة مثل 'class'.",
+      "weaknessTip": "Valid: letters/underscore first, then letters/numbers/underscores.",
+      "weaknessTipAr": "صالح: أحرف/شرطة سفلية أولاً، ثم أحرف/أرقام/شرطات سفلية."
+    },
+    {
+      "type": "code_write",
+      "prompt": "Create a variable named 'age' with the value 25, and a variable named 'name' with your name. Then print them.",
+      "promptAr": "أنشئ متغيراً باسم 'age' وقيمته 25، ومتغيراً باسم 'name' وقيمته اسمك. ثم اطبعهما.",
+      "starterCode": "# Create your variables here\n\n# Print them\n",
+      "validation": {
+        "mustContain": ["age", "name", "print"],
+        "regex": "age\\s*=\\s*25\\s*[\\n\\r]+\\s*name\\s*=\\s*[\\\"'].*[\\\"']"
+      },
+      "explanation": "Create two variables with appropriate types, then use print() to display them.",
+      "explanationAr": "أنشئ متغيرين بأنواع مناسبة، ثم استخدم print() لعرضهما.",
+      "weaknessTip": "Remember: strings need quotes, numbers don't.",
+      "weaknessTipAr": "تذكر: النصوص تحتاج علامات اقتباس، الأرقام لا تحتاج."
+    },
+    {
+      "type": "bug_hunter",
+      "prompt": "This code has an error. Click on the wrong line:",
+      "promptAr": "هذا الكود يحتوي على خطأ. انقر على السطر الخاطئ:",
+      "codeLines": [
+        "name = \"Python\"",
+        "version = 3.12",
+        "2nd_version = 3.13",
+        "print(name, version)"
+      ],
+      "correctLine": 3,
+      "explanation": "Variable names can't start with a number. '2nd_version' is invalid. Use 'second_version' or 'version_2' instead.",
+      "explanationAr": "لا يمكن لأسماء المتغيرات أن تبدأ برقم. '2nd_version' غير صالح. استخدم 'second_version' أو 'version_2' بدلاً من ذلك.",
+      "weaknessTip": "Variable names: letters/underscore first, then letters/numbers/underscores.",
+      "weaknessTipAr": "أسماء المتغيرات: أحرف/شرطة سفلية أولاً، ثم أحرف/أرقام/شرطات سفلية."
+    }
+  ],
+  "evaluation": {
+    "passingScore": 60,
+    "skillTags": ["variables", "dynamic_typing", "naming_conventions", "assignment"]
+  }
+}

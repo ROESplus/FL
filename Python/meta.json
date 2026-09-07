@@ -1,0 +1,17 @@
+{
+  "id": "python",
+  "name": "Python",
+  "nameAr": "بايثون",
+  "icon": "python.svg",
+  "highlightLang": "python",
+  "fileExtension": ".py",
+  "runCommand": "python {file}",
+  "runCommandName": "python",
+  "difficulty": "beginner",
+  "totalLessons": 99,
+  "estimatedHours": 40,
+  "description": "A powerful, readable language perfect for beginners and experts alike.",
+  "descriptionAr": "لغة قوية وسهلة القراءة، مثالية للمبتدئين والخبراء على حد سواء.",
+  "version": "1.0.0",
+  "lastUpdated": "2024-05-20"
+}

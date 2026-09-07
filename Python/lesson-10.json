@@ -1,0 +1,129 @@
+{
+  "id": "lesson-10",
+  "title": "Preventing Crashes by Handling Errors Gracefully",
+  "titleAr": "منع الانهيارات بالتعامل الأنيق مع الأخطاء",
+  "skill": "Use try/except blocks to catch and manage errors",
+  "skillAr": "استخدام كتل try/except لالتقاط وإدارة الأخطاء",
+  "phase": 1,
+  "phaseTitle": "Fundamentals",
+  "phaseTitleAr": "الأساسيات",
+  "prerequisites": ["lesson-05", "lesson-09"],
+  "sections": [
+    {
+      "content": "Your program asks the user for their age. They type \"twenty\" instead of 20. Your program crashes with a scary red error message. Game over.\n\n<strong>Before error handling (fragile code):</strong>\n<code>age = int(input(\"Enter age: \"))\nprint(f\"Next year: {age + 1}\")\n# User types \"twenty\" -> CRASH!</code>\n\n<strong>After error handling (robust code):</strong>\n<code>try:\n    age = int(input(\"Enter age: \"))\n    print(f\"Next year: {age + 1}\")\nexcept ValueError:\n    print(\"Please enter a valid number!\")</code>\n\n<strong>The Story:</strong> Think of try/except as a safety net. You try to do something risky (like converting user input). If it fails, instead of crashing, the except block catches the error and handles it gracefully.\n\n<strong>Why this matters:</strong> Users will always do unexpected things. Good code anticipates failures and recovers from them.",
+      "contentAr": "برنامجك يسأل المستخدم عن عمره. يكتب \"عشرون\" بدلاً من 20. برنامجك ينهار برسالة خطأ حمراء مخيفة. انتهت اللعبة.\n\n<strong>قبل معالجة الأخطاء (كود هش):</strong>\n<code>age = int(input(\"أدخل العمر: \"))\nprint(f\"العام القادم: {age + 1}\")\n# المستخدم يكتب \"عشرون\" -> انهيار!</code>\n\n<strong>بعد معالجة الأخطاء (كود متين):</strong>\n<code>try:\n    age = int(input(\"أدخل العمر: \"))\n    print(f\"العام القادم: {age + 1}\")\nexcept ValueError:\n    print(\"الرجاء إدخال رقم صحيح!\")</code>\n\n<strong>القصة:</strong> فكّر في try/except كشبكة أمان. تحاول فعل شيء محفوف بالمخاطر (مثل تحويل إدخال المستخدم). إذا فشل، بدلاً من الانهيار، كتلة except تلتقط الخطأ وتتعامل معه بأناقة.\n\n<strong>لماذا هذا مهم:</strong> المستخدمون سيفعلون دائماً أشياء غير متوقعة. الكود الجيد يتوقع الفشل ويتعافى منه.",
+      "diagram": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 240'%3E%3Crect width='600' height='240' fill='%231e293b' rx='12'/%3E%3Ctext x='300' y='30' text-anchor='middle' fill='%2394a3b8' font-size='16' font-family='sans-serif'%3ETry/Except Flow%3C/text%3E%3Crect x='200' y='60' width='200' height='40' fill='%23334155' rx='8'/%3E%3Ctext x='300' y='85' text-anchor='middle' fill='%23f8fafc' font-size='14' font-family='monospace'%3Etry: risky_code()%3C/text%3E%3Cpath d='M 300 100 L 300 130' stroke='%2394a3b8' stroke-width='2'/%3E%3Cellipse cx='300' cy='150' rx='80' ry='30' fill='%23334155' stroke='%23fbbf24' stroke-width='2'/%3E%3Ctext x='300' y='155' text-anchor='middle' fill='%23f8fafc' font-size='12' font-family='monospace'%3EError?%3C/text%3E%3Cpath d='M 220 150 L 120 200' stroke='%23ef4444' stroke-width='2'/%3E%3Ctext x='150' y='175' fill='%23ef4444' font-size='11' font-family='sans-serif'%3EYes%3C/text%3E%3Crect x='50' y='200' width='140' height='30' fill='%23ef4444' rx='6'/%3E%3Ctext x='120' y='220' text-anchor='middle' fill='%23fff' font-size='11' font-family='monospace'%3Eexcept: handle%3C/text%3E%3Cpath d='M 380 150 L 480 200' stroke='%2322c55e' stroke-width='2'/%3E%3Ctext x='430' y='175' fill='%2322c55e' font-size='11' font-family='sans-serif'%3ENo%3C/text%3E%3Crect x='410' y='200' width='140' height='30' fill='%2322c55e' rx='6'/%3E%3Ctext x='480' y='220' text-anchor='middle' fill='%23fff' font-size='11' font-family='monospace'%3EContinue...%3C/text%3E%3C/svg%3E",
+      "code": "# Basic try/except\ntry:\n    number = int(input(\"Enter a number: \"))\n    result = 10 / number\n    print(f\"Result: {result}\")\nexcept ValueError:\n    print(\"That's not a valid number!\")\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero!\")\n\n# Catching any error (use sparingly)\ntry:\n    risky_operation()\nexcept Exception as e:\n    print(f\"An error occurred: {e}\")",
+      "reminder": "Remember Lesson 5: input() always returns a string. Converting it with int() is risky if the user types letters. That's exactly when you need try/except!",
+      "reminderAr": "تذكر الدرس 5: input() تعيد دائماً نصاً. تحويلها بـ int() محفوف بالمخاطر إذا كتب المستخدم حروفاً. هذا بالضبط متى تحتاج try/except!",
+      "notes": [
+        { "term": "try", "description": "Block of code to test for errors." },
+        { "term": "except", "description": "Block of code to handle the error if one occurs." },
+        { "term": "Exception", "description": "An event that disrupts the normal flow of the program." },
+        { "term": "ValueError", "description": "Raised when a function gets an argument of the right type but inappropriate value." }
+      ]
+    },
+    {
+      "content": "You can also use `finally` to run code no matter what happens (like closing a file), and `else` to run code only if no error occurred.\n\n<strong>The full structure:</strong>\n- try: the risky code\n- except: if error happens\n- else: if NO error happens\n- finally: ALWAYS runs (cleanup)",
+      "contentAr": "يمكنك أيضاً استخدام `finally` لتشغيل كود مهما حدث (مثل إغلاق ملف)، و `else` لتشغيل كود فقط إذا لم يحدث خطأ.\n\n<strong>البنية الكاملة:</strong>\n- try: الكود المحفوف بالمخاطر\n- except: إذا حدث خطأ\n- else: إذا لم يحدث خطأ\n- finally: يعمل دائماً (تنظيف)",
+      "code": "try:\n    file = open(\"data.txt\", \"r\")\n    content = file.read()\nexcept FileNotFoundError:\n    print(\"File not found!\")\nelse:\n    print(\"File read successfully!\")\nfinally:\n    print(\"This always runs, good for cleanup.\")"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Example 1: Robust Input Loop",
+      "titleAr": "مثال 1: حلقة إدخال متينة",
+      "description": "Keep asking until valid input is received.",
+      "descriptionAr": "استمر بالسؤال حتى يتم استقبال إدخال صحيح.",
+      "code": "while True:\n    try:\n        age = int(input(\"Enter age: \"))\n        break  # Exit loop if successful\n    except ValueError:\n        print(\"Invalid input. Try again.\")\n\nprint(f\"Age is {age}\")"
+    },
+    {
+      "title": "Example 2: Safe Dictionary Access",
+      "titleAr": "مثال 2: وصول آمن للقاموس",
+      "description": "Handling missing keys gracefully.",
+      "descriptionAr": "التعامل مع المفاتيح المفقودة بأناقة.",
+      "code": "user = {\"name\": \"Ahmed\"}\n\ntry:\n    print(user[\"age\"])\nexcept KeyError:\n    print(\"Age not found in profile.\")"
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "What does the 'finally' block do in a try/except structure?",
+      "promptAr": "ماذا تفعل كتلة 'finally' في بنية try/except؟",
+      "options": [
+        "Runs only if an error occurs",
+        "Runs only if no error occurs",
+        "Always runs, whether an error occurred or not",
+        "Runs before the try block"
+      ],
+      "correct": 2,
+      "explanation": "finally block always executes, making it perfect for cleanup tasks like closing files.",
+      "explanationAr": "كتلة finally تعمل دائماً، مما يجعلها مثالية لمهام التنظيف مثل إغلاق الملفات.",
+      "weaknessTip": "finally = always. Think: 'finally, we clean up'.",
+      "weaknessTipAr": "finally = دائماً. فكّر: 'أخيراً، ننظف'."
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "Complete the code to catch a division by zero error:",
+      "promptAr": "أكمل الكود لالتقاط خطأ القسمة على صفر:",
+      "code": "try:\n    result = 10 / 0\n_____:ZeroDivisionError:\n    print(\"Cannot divide by zero!\")",
+      "answers": ["except"],
+      "explanation": "The 'except' keyword catches specific exceptions.",
+      "explanationAr": "كلمة 'except' تلتقط استثناءات محددة.",
+      "weaknessTip": "try -> except -> finally",
+      "weaknessTipAr": "try -> except -> finally"
+    },
+    {
+      "type": "bug_hunter",
+      "prompt": "This code has a logical error. Click the wrong line:",
+      "promptAr": "هذا الكود يحتوي على خطأ منطقي. انقر على السطر الخاطئ:",
+      "codeLines": [
+        "try:",
+        "    x = int(\"hello\")",
+        "except:",
+        "    print(\"Error!\")",
+        "    print(x)"
+      ],
+      "correctLine": 5,
+      "explanation": "Line 5 tries to print 'x', but if the error occurred on line 2, 'x' was never assigned. This will cause a NameError.",
+      "explanationAr": "السطر 5 يحاول طباعة 'x'، لكن إذا حدث خطأ في السطر 2، 'x' لم تُسند أبداً. هذا سيسبب NameError.",
+      "weaknessTip": "Variables defined in try block might not exist if error occurs early.",
+      "weaknessTipAr": "المتغيرات المعرفة في كتلة try قد لا توجد إذا حدث خطأ مبكراً."
+    },
+    {
+      "type": "code_write",
+      "prompt": "Write a try/except block that tries to convert the string 'abc' to an integer, and prints 'Invalid number' if it fails.",
+      "promptAr": "اكتب كتلة try/except تحاول تحويل النص 'abc' إلى عدد صحيح، وتطبع 'Invalid number' إذا فشلت.",
+      "starterCode": "# Your code here\n",
+      "validation": {
+        "mustContain": ["try", "except", "int", "print"],
+        "regex": "try\\s*:\\s*[\\n\\r]+\\s*int\\s*\\(\\s*[\\\"']abc[\\\"']\\s*\\)"
+      },
+      "explanation": "Use try to attempt int('abc'), except to catch ValueError and print.",
+      "explanationAr": "استخدم try لمحاولة int('abc')، except لالتقاط ValueError والطباعة.",
+      "weaknessTip": "int('abc') raises ValueError.",
+      "weaknessTipAr": "int('abc') ترفع ValueError."
+    },
+    {
+      "type": "order",
+      "prompt": "Arrange the full error handling structure:",
+      "promptAr": "رتّب بنية معالجة الأخطاء الكاملة:",
+      "items": [
+        "finally:",
+        "try:",
+        "except ValueError:",
+        "    print(\"Always runs\")",
+        "    print(\"Handle error\")",
+        "    risky_code()"
+      ],
+      "explanation": "try -> except -> finally, with indented blocks.",
+      "explanationAr": "try -> except -> finally، مع كتل مُزاحة.",
+      "weaknessTip": "try: code -> except: handle -> finally: cleanup",
+      "weaknessTipAr": "try: كود -> except: معالجة -> finally: تنظيف"
+    }
+  ],
+  "evaluation": {
+    "passingScore": 60,
+    "skillTags": ["error_handling", "try_except", "exceptions", "robust_code", "finally_block"]
+  }
+}
