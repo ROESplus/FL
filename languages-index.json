@@ -29,7 +29,7 @@
       "difficulty": "advanced",
       "description": "High-performance compiled language for systems and games.",
       "descriptionAr": "لغة عالية الأداء مُترجَمة، تُستخدم في الأنظمة والألعاب."
-    }
+    },
     {
       "id": "js",
       "name": "JavaScript",
@@ -43,6 +43,6 @@
       "difficulty": "beginner",
       "description": "Dynamic, interpreted language primarily used for web development.",
       "descriptionAr": "لغة ديناميكية ومفسرة، تُستخدم بشكل أساسي في تطوير الويب وإضافة التفاعل للصفحات."
-    }
+    },
   ]
 }
