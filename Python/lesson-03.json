@@ -1,0 +1,149 @@
+{
+  "id": "lesson-03",
+  "title": "Crafting Smart Text and Merging Data Seamlessly",
+  "titleAr": "صياغة نصوص ذكية ودمج البيانات بسلاسة",
+  "skill": "Format and manipulate strings using f-strings and methods",
+  "skillAr": "تنسيق ومعالجة النصوص باستخدام f-strings والدوال المساعدة",
+  "phase": 1,
+  "phaseTitle": "Fundamentals",
+  "phaseTitleAr": "الأساسيات",
+  "prerequisites": [
+    "lesson-02"
+  ],
+  "sections": [
+    {
+      "content": "Remember Lesson 1 when we printed 'Hello'? And Lesson 2 where we stored values in variables? Now imagine combining them: printing a personalized greeting.\n\n<strong>Before f-strings (the painful way):</strong>\n<code>name = \"Ahmed\"\nage = 25\nprint(\"Hello, \" + name + \". You are \" + str(age) + \" years old.\")</code>\n\nNotice the mess? You had to use `+` everywhere, and convert numbers to strings with `str()`. One missing space, and your output looks broken.\n\n<strong>After f-strings (the elegant way):</strong>\n<code>name = \"Ahmed\"\nage = 25\nprint(f\"Hello, {name}. You are {age} years old.\")</code>\n\nJust put an `f` before the quotes, and drop your variables inside `{}`. Python handles everything—spaces, types, formatting. It's like filling a template.\n\n<strong>Story time:</strong> Think of f-strings like a name tag at a conference. Instead of writing \"Hello, [blank]\" and manually sticking a label on it, you just say \"Hello, {name}\" and Python prints the name tag perfectly every time.",
+      "contentAr": "تذكر الدرس 1 عندما طبعنا 'مرحباً'؟ والدرس 2 حيث خزّنّا القيم في متغيرات؟ الآن تخيل دمجهما: طباعة تحية مخصصة.\n\n<strong>قبل f-strings (الطريقة المؤلمة):</strong>\n<code>name = \"Ahmed\"\nage = 25\nprint(\"مرحباً، \" + name + \". عمرك \" + str(age) + \" سنة.\")</code>\n\nلاحظ الفوضى؟ كنت تستخدم `+` في كل مكان، وتحول الأرقام إلى نصوص بـ `str()`. نسيان مسافة واحدة، ويبدو المخرج مكسوراً.\n\n<strong>بعد f-strings (الطريقة الأنيقة):</strong>\n<code>name = \"Ahmed\"\nage = 25\nprint(f\"مرحباً، {name}. عمرك {age} سنة.\")</code>\n\nفقط ضع `f` قبل علامات الاقتباس، وأسقط متغيراتك داخل `{}`. Python تتعامل مع كل شيء—المسافات، الأنواع، التنسيق. إنه مثل ملء قالب جاهز.\n\n<strong>قصة توضيحية:</strong> فكّر في f-strings كبطاقة اسم في مؤتمر. بدلاً من كتابة \"مرحباً، [فراغ]\" ولصق ملصق عليها يدوياً، تقول فقط \"مرحباً، {name}\" وPython تطبع بطاقة الاسم بشكل مثالي في كل مرة.",
+      "diagram": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 220'%3E%3Crect width='600' height='220' fill='%231e293b' rx='12'/%3E%3Ctext x='300' y='30' text-anchor='middle' fill='%2394a3b8' font-size='16' font-family='sans-serif'%3Ef-string Template%3C/text%3E%3Crect x='50' y='60' width='500' height='60' fill='%23334155' rx='8'/%3E%3Ctext x='70' y='95' fill='%23f8fafc' font-size='16' font-family='monospace'%3EHello, %3C/text%3E%3Crect x='145' y='70' width='80' height='40' fill='%2322c55e' rx='6'/%3E%3Ctext x='185' y='95' text-anchor='middle' fill='%23fff' font-size='14' font-family='monospace'%3E%7Bname%7D%3C/text%3E%3Ctext x='240' y='95' fill='%23f8fafc' font-size='16' font-family='monospace'%3E. Age: %3C/text%3E%3Crect x='320' y='70' width='70' height='40' fill='%2322c55e' rx='6'/%3E%3Ctext x='355' y='95' text-anchor='middle' fill='%23fff' font-size='14' font-family='monospace'%3E%7Bage%7D%3C/text%3E%3Cpath d='M 185 130 L 185 160' stroke='%2322c55e' stroke-width='2'/%3E%3Cpath d='M 355 130 L 355 160' stroke='%2322c55e' stroke-width='2'/%3E%3Crect x='140' y='165' width='90' height='35' fill='%23475569' rx='6'/%3E%3Ctext x='185' y='187' text-anchor='middle' fill='%23f8fafc' font-size='14' font-family='monospace'%3EAhmed%3C/text%3E%3Crect x='310' y='165' width='90' height='35' fill='%23475569' rx='6'/%3E%3Ctext x='355' y='187' text-anchor='middle' fill='%23f8fafc' font-size='14' font-family='monospace'%3E25%3C/text%3E%3C/svg%3E",
+      "code": "# f-strings in action\nuser = \"Sara\"\npoints = 1287\n\nprint(f\"Welcome, {user}!\")\nprint(f\"You have {points} Quanta.\")\nprint(f\"That's {points * 10} experience points!\")\n\n# You can even do math inside {}\nprice = 50\ntax = 0.15\nprint(f\"Total: ${price * (1 + tax):.2f}\")  # $57.50",
+      "reminder": "Remember Lesson 2: variables are containers. f-strings let you peek inside those containers and display their contents beautifully. Don't forget the `f` before the quotes!",
+      "reminderAr": "تذكر الدرس 2: المتغيرات هي حاويات. f-strings تتيح لك النظر داخل تلك الحاويات وعرض محتوياتها بشكل جميل. لا تنسَ الـ `f` قبل علامات الاقتباس!",
+      "notes": [
+        {
+          "term": "f-string",
+          "description": "Formatted string literal. Prefix with 'f' and use {} for variables."
+        },
+        {
+          "term": "str() function",
+          "description": "Converts any value to a string. Still useful outside f-strings."
+        },
+        {
+          "term": "String methods",
+          "description": "Built-in tools like .upper(), .lower(), .strip() to transform text."
+        }
+      ]
+    },
+    {
+      "content": "Python gives you a toolbox of string methods. Think of them as verbs you can perform on text:\n\n- `.upper()` → shouts the text\n- `.lower()` → whispers it\n- `.strip()` → removes extra spaces\n- `.replace(old, new)` → swaps words\n- `.split()` → cuts text into pieces\n- `.join(list)` → glues pieces back together\n\n<strong>Before (manual work):</strong>\n<code>text = \"  Hello World  \"\n# Manually removing spaces... tedious!</code>\n\n<strong>After (one method call):</strong>\n<code>text = \"  Hello World  \"\nclean = text.strip()  # \"Hello World\"</code>",
+      "contentAr": "تمنحك Python صندوق أدوات من دوال النصوص. فكّر فيها كأفعال يمكنك تنفيذها على النص:\n\n- `.upper()` → تصرخ بالنص\n- `.lower()` → تهمس به\n- `.strip()` → تزيل المسافات الزائدة\n- `.replace(old, new)` → تستبدل الكلمات\n- `.split()` → تقطع النص إلى قطع\n- `.join(list)` → تلصق القطع معاً\n\n<strong>قبل (عمل يدوي):</strong>\n<code>text = \"  Hello World  \"\n# إزالة المسافات يدوياً... ممل!</code>\n\n<strong>بعد (استدعاء دالة واحدة):</strong>\n<code>text = \"  Hello World  \"\nclean = text.strip()  # \"Hello World\"</code>",
+      "code": "# String methods showcase\nemail = \"  User@Example.COM  \"\n\n# Clean it up step by step\nemail = email.strip()       # \"User@Example.COM\"\nemail = email.lower()       # \"user@example.com\"\n\nprint(f\"Clean email: {email}\")\n\n# Split and replace\nsentence = \"Python is awesome\"\nwords = sentence.split()    # ['Python', 'is', 'awesome']\nnew_sentence = \"-\".join(words)  # \"Python-is-awesome\"\n\nprint(f\"Joined: {new_sentence}\")",
+      "reminder": "Strings are immutable in Python—methods don't change the original, they return a new one. Always assign the result: `text = text.strip()`, not just `text.strip()`.",
+      "reminderAr": "النصوص غير قابلة للتغيير في Python—الدوال لا تغير الأصل، بل تعيد نصاً جديداً. اسند النتيجة دائماً: `text = text.strip()`، وليس فقط `text.strip()`."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Example 1: Receipt Generator",
+      "titleAr": "مثال 1: مولّد الإيصالات",
+      "description": "Using f-strings to format a clean receipt.",
+      "descriptionAr": "استخدام f-strings لتنسيق إيصال نظيف.",
+      "code": "item = \"Coffee\"\nprice = 4.5\nquantity = 2\ntotal = price * quantity\n\nprint(\"=== Receipt ===\")\nprint(f\"Item: {item}\")\nprint(f\"Price: ${price:.2f}\")\nprint(f\"Qty: {quantity}\")\nprint(f\"Total: ${total:.2f}\")\nprint(\"===============\")"
+    },
+    {
+      "title": "Example 2: Username Generator",
+      "titleAr": "مثال 2: مولّد أسماء المستخدمين",
+      "description": "Combining strings and methods to create usernames.",
+      "descriptionAr": "دمج النصوص والدوال لإنشاء أسماء مستخدمين.",
+      "code": "first = \"  Ahmed  \"\nlast = \"Ali\"\n\n# Clean and combine\nusername = first.strip().lower() + \"_\" + last.lower()\nprint(f\"Username: {username}\")  # ahmed_ali"
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "What does the `f` before a string do in Python?",
+      "promptAr": "ماذا تفعل `f` قبل النص في Python؟",
+      "options": [
+        "Makes the string faster",
+        "Allows embedding variables inside {} placeholders",
+        "Converts the string to uppercase",
+        "Marks the string as final"
+      ],
+      "correct": 1,
+      "explanation": "The `f` prefix tells Python to evaluate expressions inside {} and insert their values.",
+      "explanationAr": "البادئة `f` تخبر Python بتقييم التعبيرات داخل {} وإدراج قيمها.",
+      "weaknessTip": "f = formatted. Think: 'fill in the blanks'.",
+      "weaknessTipAr": "f = منسّق. فكّر: 'املأ الفراغات'."
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "Complete the f-string to display the variable 'score':",
+      "promptAr": "أكمل f-string لعرض المتغير 'score':",
+      "code": "score = 95\nprint(f\"Your score is _____\")",
+      "answers": [
+        "{score}"
+      ],
+      "explanation": "Wrap the variable name in curly braces inside an f-string.",
+      "explanationAr": "غلّف اسم المتغير بأقواس معقوفة داخل f-string.",
+      "weaknessTip": "f\"text {variable}\" — don't forget the curly braces!",
+      "weaknessTipAr": "f\"نص {متغير}\" — لا تنسَ الأقواس المعقوفة!"
+    },
+    {
+      "type": "bug_hunter",
+      "prompt": "This code has an error. Click the wrong line:",
+      "promptAr": "هذا الكود يحتوي على خطأ. انقر على السطر الخاطئ:",
+      "codeLines": [
+        "name = \"Python\"",
+        "greeting = \"Hello, \" + name",
+        "greeting.upper()",
+        "print(greeting)"
+      ],
+      "correctLine": 3,
+      "explanation": "Line 3 calls .upper() but doesn't save the result. It should be: greeting = greeting.upper()",
+      "explanationAr": "السطر 3 يستدعي .upper() لكن لا يحفظ النتيجة. يجب أن يكون: greeting = greeting.upper()",
+      "weaknessTip": "Strings are immutable—methods return new strings, they don't modify in place.",
+      "weaknessTipAr": "النصوص غير قابلة للتغيير—الدوال تعيد نصوصاً جديدة، لا تعدّل في المكان."
+    },
+    {
+      "type": "code_write",
+      "prompt": "Create variables 'city' (value \"Cairo\") and 'temp' (value 35). Print: 'Cairo is 35 degrees today' using an f-string.",
+      "promptAr": "أنشئ متغيرين 'city' (قيمته \"Cairo\") و 'temp' (قيمته 35). اطبع: 'Cairo is 35 degrees today' باستخدام f-string.",
+      "starterCode": "# Your code here\n",
+      "validation": {
+        "mustContain": [
+          "city",
+          "temp",
+          "print",
+          "f\""
+        ],
+        "regex": "city\\s*=\\s*[\\\"']Cairo[\\\"']\\s*[\\n\\r]+\\s*temp\\s*=\\s*35"
+      },
+      "explanation": "Define both variables, then use an f-string with {} to embed them.",
+      "explanationAr": "عرّف كلا المتغيرين، ثم استخدم f-string مع {} لتضمينهما.",
+      "weaknessTip": "f\"{city} is {temp} degrees today\"",
+      "weaknessTipAr": "f\"{city} is {temp} degrees today\""
+    },
+    {
+      "type": "order",
+      "prompt": "Arrange the steps to clean and format an email:",
+      "promptAr": "رتّب الخطوات لتنسيق بريد إلكتروني:",
+      "items": [
+        "print(f\"Clean: {email}\")",
+        "email = email.strip().lower()",
+        "email = \"  User@Example.COM  \""
+      ],
+      "explanation": "First define the variable, then clean it, then display it.",
+      "explanationAr": "أولاً عرّف المتغير، ثم نظّفه، ثم اعرضه.",
+      "weaknessTip": "Define → Transform → Display",
+      "weaknessTipAr": "تعريف → تحويل → عرض"
+    }
+  ],
+  "evaluation": {
+    "passingScore": 60,
+    "skillTags": [
+      "f_strings",
+      "string_methods",
+      "text_formatting",
+      "immutability"
+    ]
+  }
+}
