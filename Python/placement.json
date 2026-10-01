@@ -1,0 +1,270 @@
+{
+  "id": "placement-test",
+  "type": "placement-test",
+  "title": "Python Placement Test",
+  "titleAr": "اختبار تحديد المستوى - بايثون",
+  "description": "Answer honestly to find your right starting point",
+  "descriptionAr": "أجب بصدق لتحديد نقطة البداية المناسبة لك",
+  "questions": [
+    {
+      "type": "mcq",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "Which function is used to display text in Python?",
+      "promptAr": "أي دالة تُستخدم لعرض النص في بايثون؟",
+      "options": ["display()", "print()", "show()", "output()"],
+      "correct": 1,
+      "explanation": "The print() function displays output to the console",
+      "explanationAr": "دالة print() تعرض المخرجات على وحدة التحكم"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "What is the output of: print(type(5))?",
+      "promptAr": "ما ناتج: print(type(5))؟",
+      "options": ["<class 'int'>", "<class 'float'>", "<class 'str'>", "<class 'number'>"],
+      "correct": 0,
+      "explanation": "5 is an integer, so type() returns <class 'int'>",
+      "explanationAr": "5 عدد صحيح، لذا type() تُرجع <class 'int'>"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "Complete the code to read user input:",
+      "promptAr": "أكمل الكود لقراءة إدخال المستخدم:",
+      "code": "name = _____(\"What is your name? \")\nprint(\"Hello, \" + name)",
+      "answers": ["input"],
+      "explanation": "input() reads text from the user",
+      "explanationAr": "input() تقرأ نصاً من المستخدم"
+    },
+    {
+      "type": "bug_hunter",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "Find the error in this code:",
+      "promptAr": "ابحث عن الخطأ في هذا الكود:",
+      "codeLines": [
+        "age = 25",
+        "if age > 18",
+        "    print(\"Adult\")",
+        "else:",
+        "    print(\"Minor\")"
+      ],
+      "correctLine": 2,
+      "explanation": "Missing colon (:) at the end of the if statement",
+      "explanationAr": "الفاصلة الناقصة (:) في نهاية عبارة if مفقودة"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "What is the result of: 17 // 5?",
+      "promptAr": "ما نتيجة: 17 // 5؟",
+      "options": ["3.4", "3", "2", "Error"],
+      "correct": 1,
+      "explanation": "// is integer division (floor division), returns 3",
+      "explanationAr": "// هي القسمة الصحيحة، تُرجع 3"
+    },
+    {
+      "type": "code_write",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "Write a program that takes a number from the user and prints whether it's even or odd.",
+      "promptAr": "اكتب برنامجاً يأخذ رقماً من المستخدم ويطبع إذا كان زوجياً أو فردياً.",
+      "starterCode": "# Your code here\n",
+      "validation": {
+        "mustContain": ["input", "if", "%"],
+        "expectedOutput": "even"
+      },
+      "explanation": "Use num % 2 == 0 to check if even",
+      "explanationAr": "استخدم num % 2 == 0 للتحقق من الزوجية"
+    },
+    {
+      "type": "order_lines",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "Arrange these lines to create a program that prints numbers from 1 to 5:",
+      "promptAr": "رتّب هذه الأسطر لإنشاء برنامج يطبع الأعداد من 1 إلى 5:",
+      "items": [
+        "for i in range(1, 6):",
+        "    print(i)"
+      ],
+      "validOrderings": [
+        ["for i in range(1, 6):", "    print(i)"]
+      ],
+      "explanation": "range(1, 6) generates 1,2,3,4,5",
+      "explanationAr": "range(1, 6) تولد 1,2,3,4,5"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "What does this code output?\n\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+      "promptAr": "ما ناتج هذا الكود؟\n\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+      "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4]", "Error"],
+      "correct": 1,
+      "explanation": "Lists are mutable and y references the same list as x",
+      "explanationAr": "القوائم قابلة للتغيير و y تشير إلى نفس القائمة التي يشير إليها x"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "Complete the function to return the factorial of n:",
+      "promptAr": "أكمل الدالة لإرجاع مضروب n:",
+      "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    _____ n * factorial(n - 1)",
+      "answers": ["return"],
+      "explanation": "Use return to send the result back",
+      "explanationAr": "استخدم return لإرجاع النتيجة"
+    },
+    {
+      "type": "code_write",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "Write a function 'is_palindrome' that checks if a string reads the same forwards and backwards.",
+      "promptAr": "اكتب دالة 'is_palindrome' تتحقق إذا كان النص يُقرأ بنفس الطريقة من الأمام والخلف.",
+      "starterCode": "def is_palindrome(text):\n    # Your code here\n    pass\n\nprint(is_palindrome(\"radar\"))  # True\nprint(is_palindrome(\"hello\"))  # False\n",
+      "validation": {
+        "mustContain": ["def", "return"],
+        "expectedOutput": "True"
+      },
+      "explanation": "Compare text with text[::-1]",
+      "explanationAr": "قارن النص مع text[::-1]"
+    },
+    {
+      "type": "bug_hunter",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "Find the bug in this code that should print the sum of even numbers from 1 to 10:",
+      "promptAr": "ابحث عن الخطأ في هذا الكود الذي يفترض أن يطبع مجموع الأعداد الزوجية من 1 إلى 10:",
+      "codeLines": [
+        "total = 0",
+        "for i in range(1, 11):",
+        "    if i % 2 == 0:",
+        "        total = i",
+        "print(total)"
+      ],
+      "correctLine": 4,
+      "explanation": "Should be total += i, not total = i (which overwrites instead of adding)",
+      "explanationAr": "يجب أن تكون total += i، وليس total = i (الذي يستبدل بدلاً من الجمع)"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "What is the output?\n\ndef f(a, b=[]):\n    b.append(a)\n    return b\n\nprint(f(1))\nprint(f(2))",
+      "promptAr": "ما الناتج؟\n\ndef f(a, b=[]):\n    b.append(a)\n    return b\n\nprint(f(1))\nprint(f(2))",
+      "options": [
+        "[1] then [2]",
+        "[1] then [1, 2]",
+        "[1] then [2, 1]",
+        "Error"
+      ],
+      "correct": 1,
+      "explanation": "Default argument [] is created once and shared between calls (mutable default argument trap)",
+      "explanationAr": "القيمة الافتراضية [] تُنشأ مرة واحدة وتُشارك بين الاستدعاءات (فخ الوسيط الافتراضي القابل للتغيير)"
+    },
+    {
+      "type": "code_write",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "Write a decorator 'timer' that measures and prints the execution time of any function.",
+      "promptAr": "اكتب decorator اسمه 'timer' يقيس ويطبع وقت تنفيذ أي دالة.",
+      "starterCode": "import time\n\ndef timer(func):\n    # Your code here\n    pass\n\n@timer\ndef slow_function():\n    time.sleep(1)\n    return \"Done\"\n\nslow_function()\n",
+      "validation": {
+        "mustContain": ["wrapper", "return", "time"],
+        "expectedOutput": "Done"
+      },
+      "explanation": "Use functools.wraps and measure time before/after calling func",
+      "explanationAr": "استخدم functools.wraps وقس الوقت قبل وبعد استدعاء func"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "What is the output of this code using list comprehension?\n\nresult = [x**2 for x in range(5) if x % 2 == 0]\nprint(result)",
+      "promptAr": "ما ناتج هذا الكود باستخدام list comprehension؟\n\nresult = [x**2 for x in range(5) if x % 2 == 0]\nprint(result)",
+      "options": [
+        "[0, 4, 16]",
+        "[1, 9]",
+        "[0, 1, 4, 9, 16]",
+        "[4, 16]"
+      ],
+      "correct": 0,
+      "explanation": "Even numbers in range(5) are 0,2,4. Their squares are 0,4,16",
+      "explanationAr": "الأعداد الزوجية في range(5) هي 0,2,4. مربعاتها هي 0,4,16"
+    },
+    {
+      "type": "order_lines",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "Arrange to create a class with inheritance and proper initialization:",
+      "promptAr": "رتّب لإنشاء كائن مع وراثة وتهيئة صحيحة:",
+      "items": [
+        "class Animal:",
+        "    def __init__(self, name):",
+        "        self.name = name",
+        "class Dog(Animal):",
+        "    def __init__(self, name, breed):",
+        "        super().__init__(name)",
+        "        self.breed = breed"
+      ],
+      "validOrderings": [
+        [
+          "class Animal:",
+          "    def __init__(self, name):",
+          "        self.name = name",
+          "class Dog(Animal):",
+          "    def __init__(self, name, breed):",
+          "        super().__init__(name)",
+          "        self.breed = breed"
+        ]
+      ],
+      "explanation": "Define parent class first, then child class using super() to call parent __init__",
+      "explanationAr": "عرّف الكائن الأب أولاً، ثم الكائن الابن باستخدام super() لاستدعاء __init__ للأب"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "Complete the exception handling to safely divide two numbers:",
+      "promptAr": "أكمل معالجة الاستثناءات للقسمة الآمنة بين عددين:",
+      "code": "def safe_divide(a, b):\n    _____:\n        return a / b\n    _____ ZeroDivisionError:\n        return \"Cannot divide by zero\"\n    _____ TypeError:\n        return \"Invalid types\"",
+      "answers": ["try", "except", "except"],
+      "explanation": "Use try/except blocks to handle exceptions",
+      "explanationAr": "استخدم كتل try/except لمعالجة الاستثناءات"
+    },
+    {
+      "type": "code_write",
+      "difficulty": "advanced",
+      "weight": 25,
+      "prompt": "Write a generator function 'fibonacci' that yields Fibonacci numbers up to a given limit.",
+      "promptAr": "اكتب دالة مولِّدة 'fibonacci' تُنتج أعداد فيبوناتشي حتى حد معين.",
+      "starterCode": "def fibonacci(limit):\n    # Your code here\n    pass\n\nfor num in fibonacci(50):\n    print(num, end=\" \")\n# Expected: 0 1 1 2 3 5 8 13 21 34\n",
+      "validation": {
+        "mustContain": ["yield", "def"],
+        "expectedOutput": "0 1 1 2 3 5 8 13 21 34"
+      },
+      "explanation": "Use yield instead of return to create a generator",
+      "explanationAr": "استخدم yield بدلاً من return لإنشاء مولِّد"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "advanced",
+      "weight": 25,
+      "prompt": "What does this code output?\n\nx = {1, 2, 3}\ny = {2, 3, 4}\nprint(x & y)",
+      "promptAr": "ما ناتج هذا الكود؟\n\nx = {1, 2, 3}\ny = {2, 3, 4}\nprint(x & y)",
+      "options": [
+        "{2, 3}",
+        "{1, 2, 3, 4}",
+        "{1, 4}",
+        "Error"
+      ],
+      "correct": 0,
+      "explanation": "& is the intersection operator for sets, returns common elements",
+      "explanationAr": "& هو معامل التقاطع للمجموعات، يُرجع العناصر المشتركة"
+    }
+  ]
+}
