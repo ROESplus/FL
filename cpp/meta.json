@@ -4,7 +4,7 @@
   "nameAr": "سي بلس بلس",
   "description": "Learn C++ from basics to modern C++20 and build high-performance applications used in games, operating systems, and embedded systems.",
   "descriptionAr": "تعلم C++ من الأساسيات إلى C++20 الحديثة وابنِ تطبيقات عالية الأداء تُستخدم في الألعاب وأنظمة التشغيل والأنظمة المدمجة.",
-  "icon": "cpp.svg",
+  "icon": "icon.svg",
   "categories": ["Games", "Systems", "Performance", "Embedded"],
   "categoriesAr": ["ألعاب", "أنظمة", "أداء عالي", "أنظمة مدمجة"],
   "totalUnits": 14,
