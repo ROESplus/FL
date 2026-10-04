@@ -1,0 +1,254 @@
+{
+  "id": "placement-test",
+  "type": "placement-test",
+  "title": "C++ Placement Test",
+  "titleAr": "اختبار تحديد المستوى - C++",
+  "description": "Answer honestly to find your right starting point",
+  "descriptionAr": "أجب بصدق لتحديد نقطة البداية المناسبة لك",
+  "testConfig": {
+    "totalQuestions": 20,
+    "showScore": false,
+    "adaptive": true
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "What does cout do in C++?",
+      "promptAr": "ماذا يفعل cout في C++؟",
+      "multipleCorrect": false,
+      "options": ["Reads input", "Prints output", "Declares a variable", "Creates a function"],
+      "correct": 1,
+      "explanation": "cout is the console output object used to print text.",
+      "explanationAr": "cout هو كائن إخراج وحدة التحكم المستخدم لطباعة النص."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "Which header file is needed for cout and cin?",
+      "promptAr": "أي ملف رأس مطلوب لـ cout و cin؟",
+      "multipleCorrect": false,
+      "options": ["<string>", "<iostream>", "<cmath>", "<vector>"],
+      "correct": 1,
+      "explanation": "iostream (Input/Output Stream) is required for cout and cin.",
+      "explanationAr": "iostream (تدفق الإدخال/الإخراج) مطلوب لـ cout و cin."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "What data type stores whole numbers in C++?",
+      "promptAr": "ما نوع البيانات الذي يخزن الأعداد الصحيحة في C++؟",
+      "multipleCorrect": false,
+      "options": ["float", "int", "double", "char"],
+      "correct": 1,
+      "explanation": "int stores integer (whole) numbers.",
+      "explanationAr": "int يخزن الأعداد الصحيحة."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "beginner",
+      "weight": 5,
+      "prompt": "What is the entry point of every C++ program?",
+      "promptAr": "ما نقطة الدخول لكل برنامج C++؟",
+      "multipleCorrect": false,
+      "options": ["start()", "begin()", "main()", "init()"],
+      "correct": 2,
+      "explanation": "The main() function is where every C++ program starts executing.",
+      "explanationAr": "دالة main() هي حيث يبدأ تنفيذ كل برنامج C++."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "What is the output of: cout << 17 / 5;",
+      "promptAr": "ما ناتج: cout << 17 / 5;",
+      "multipleCorrect": false,
+      "options": ["3.4", "3", "4", "3.5"],
+      "correct": 1,
+      "explanation": "Integer division truncates the decimal. 17/5 = 3.",
+      "explanationAr": "القسمة الصحيحة تقطع الكسر. 17/5 = 3."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "Which loop is guaranteed to execute at least once?",
+      "promptAr": "أي حلقة مضمونة التنفيذ مرة واحدة على الأقل؟",
+      "multipleCorrect": false,
+      "options": ["for", "while", "do-while", "foreach"],
+      "correct": 2,
+      "explanation": "do-while checks the condition AFTER executing the loop body.",
+      "explanationAr": "do-while تتحقق من الشرط بعد تنفيذ جسم الحلقة."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "What does the & symbol mean in: int &ref = x;",
+      "promptAr": "ماذا يعني الرمز & في: int &ref = x;",
+      "multipleCorrect": false,
+      "options": ["Address of", "Reference", "Pointer", "Multiplication"],
+      "correct": 1,
+      "explanation": "& in a declaration creates a reference (an alias for another variable).",
+      "explanationAr": "& في الإعلان ينشئ مرجعاً (اسماً بديلاً لمتغير آخر)."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "elementary",
+      "weight": 10,
+      "prompt": "How do you declare an array of 5 integers in C++?",
+      "promptAr": "كيف تعلن مصفوفة من 5 أعداد صحيحة في C++؟",
+      "multipleCorrect": false,
+      "options": ["int arr[5];", "array int[5];", "int arr(5);", "int[5] arr;"],
+      "correct": 0,
+      "explanation": "The syntax is: type name[size];",
+      "explanationAr": "الصيغة هي: النوع الاسم[الحجم];"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "What is the output?\n\nint x = 5;\nint *p = &x;\n*p = 10;\ncout << x;",
+      "promptAr": "ما الناتج؟\n\nint x = 5;\nint *p = &x;\n*p = 10;\ncout << x;",
+      "multipleCorrect": false,
+      "options": ["5", "10", "Address of x", "Error"],
+      "correct": 1,
+      "explanation": "p points to x. Changing *p changes x directly.",
+      "explanationAr": "p يشير إلى x. تغيير *p يغير x مباشرة."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "What is the difference between 'struct' and 'class' in C++?",
+      "promptAr": "ما الفرق بين 'struct' و 'class' في C++؟",
+      "multipleCorrect": false,
+      "options": [
+        "They are identical",
+        "struct members are public by default, class members are private",
+        "class is faster than struct",
+        "struct cannot have functions"
+      ],
+      "correct": 1,
+      "explanation": "The only difference is default access: struct = public, class = private.",
+      "explanationAr": "الفرق الوحيد هو الوصول الافتراضي: struct = عام، class = خاص."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "What does 'virtual' keyword do in a function declaration?",
+      "promptAr": "ماذا يفعل الكلمة المفتاحية 'virtual' في إعلان دالة؟",
+      "multipleCorrect": false,
+      "options": [
+        "Makes the function run faster",
+        "Allows derived classes to override the function",
+        "Makes the function private",
+        "Creates a template function"
+      ],
+      "correct": 1,
+      "explanation": "virtual enables polymorphism - derived classes can override the function.",
+      "explanationAr": "virtual يتيح التعدد الشكلي - الفئات المشتقة يمكنها تجاوز الدالة."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "intermediate",
+      "weight": 15,
+      "prompt": "What is a memory leak in C++?",
+      "promptAr": "ما هو تسرب الذاكرة في C++؟",
+      "multipleCorrect": false,
+      "options": [
+        "When RAM is physically damaged",
+        "Allocated memory that is never freed",
+        "When variables go out of scope",
+        "Stack overflow error"
+      ],
+      "correct": 1,
+      "explanation": "Memory leak occurs when you allocate memory with new but never call delete.",
+      "explanationAr": "تسرب الذاكرة يحدث عندما تخصص ذاكرة بـ new لكن لا تستدعي delete أبداً."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "What is the Rule of Three in C++?",
+      "promptAr": "ما هي قاعدة الثلاثة في C++؟",
+      "multipleCorrect": false,
+      "options": [
+        "A class can have at most 3 member functions",
+        "If you define one of destructor/copy constructor/copy assignment, define all three",
+        "Three levels of inheritance maximum",
+        "Maximum 3 parameters per function"
+      ],
+      "correct": 1,
+      "explanation": "If a class manages resources, it needs all three: destructor, copy constructor, copy assignment operator.",
+      "explanationAr": "إذا كانت الفئة تدير موارد، تحتاج الثلاثة: المدمر، منشئ النسخ، معامل إسناد النسخ."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "What is move semantics in C++11?",
+      "promptAr": "ما هي دلالات النقل في C++11؟",
+      "multipleCorrect": false,
+      "options": [
+        "Moving files between directories",
+        "Transferring ownership of resources instead of copying",
+        "Moving code to different files",
+        "Moving variables between namespaces"
+      ],
+      "correct": 1,
+      "explanation": "Move semantics transfers ownership of resources (like memory) instead of expensive copying.",
+      "explanationAr": "دلالات النقل تنقل ملكية الموارد (مثل الذاكرة) بدلاً من النسخ المكلف."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "What is the output?\n\n#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    auto ptr = make_unique<int>(42);\n    auto ptr2 = move(ptr);\n    if (!ptr) cout << \"empty\";\n    cout << *ptr2;\n}",
+      "promptAr": "ما الناتج؟\n\ncode shown above",
+      "multipleCorrect": false,
+      "options": ["empty42", "42", "empty", "Error - cannot move unique_ptr"],
+      "correct": 0,
+      "explanation": "After move, ptr is empty (null). ptr2 owns the value 42.",
+      "explanationAr": "بعد النقل، ptr فارغ (لا شيء). ptr2 يمتلك القيمة 42."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "advanced",
+      "weight": 20,
+      "prompt": "What is SFINAE in C++ template programming?",
+      "promptAr": "ما هو SFINAE في برمجة القوالب بـ C++؟",
+      "multipleCorrect": false,
+      "options": [
+        "A type of memory allocation",
+        "Substitution Failure Is Not An Error - invalid template substitutions are silently discarded",
+        "A sorting algorithm",
+        "Standard File Input And Export"
+      ],
+      "correct": 1,
+      "explanation": "SFINAE means invalid template parameter substitutions are removed from overload candidates, not treated as errors.",
+      "explanationAr": "SFINAE يعني أن استبدالات معلمات القوالب غير الصالحة تُزال من المرشحين للتحميل الزائد، ولا تُعامل كأخطاء."
+    },
+    {
+      "type": "mcq",
+      "difficulty": "advanced",
+      "weight": 25,
+      "prompt": "What does std::forward do in perfect forwarding?",
+      "promptAr": "ماذا يفعل std::forward في التمرير المثالي؟",
+      "multipleCorrect": false,
+      "options": [
+        "Forwards data to the next function in a queue",
+        "Preserves the value category (lvalue/rvalue) when forwarding arguments",
+        "Forwards exceptions to the caller",
+        "Moves data forward in memory"
+      ],
+      "correct": 1,
+      "explanation": "std::forward preserves whether an argument was an lvalue or rvalue when passing it along.",
+      "explanationAr": "std::forward يحافظ على ما إذا كانت الوسيطة lvalue أو rvalue عند تمريرها."
+    }
+  ]
+}

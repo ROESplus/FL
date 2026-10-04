@@ -1,0 +1,208 @@
+{
+  "id": "lesson-01",
+  "type": "lesson",
+  "unit": "unit-01",
+  "lessonInUnit": 1,
+  "skill": "Discovering What C++ Is",
+  "skillAr": "اكتشاف ما هي C++",
+  "title": "C++: The Language That Powers the World",
+  "titleAr": "C++: اللغة التي تُشغّل العالم",
+  "sections": [
+    {
+      "content": "## What is C++?\n\nImagine you're building a house. You need tools that are **fast**, **powerful**, and give you **complete control** over every detail. That's exactly what C++ is for programming.\n\nC++ is a programming language created by **Bjarne Stroustrup** in 1979 at Bell Labs. It was designed to add the power of C with modern programming features.\n\nThink of it this way:\n- **Python** is like driving an automatic car - easy, but less control\n- **C++** is like driving a manual racing car - more control, more speed, more responsibility\n\nC++ gives you **direct access to computer hardware** while still providing modern programming features.",
+      "contentAr": "## ما هي C++؟\n\nتخيل أنك تبني منزلاً. تحتاج أدوات **سريعة** و**قوية** وتعطيك **تحكماً كاملاً** في كل التفاصيل. هذا بالضبط ما هي C++ للبرمجة.\n\nC++ هي لغة برمجة أنشأها **بيارن ستروستروب** عام 1979 في مختبرات بيل. صُممت لإضافة قوة C مع ميزات برمجة حديثة.\n\nفكر في الأمر بهذه الطريقة:\n- **Python** مثل قيادة سيارة أوتوماتيكية - سهلة، لكن تحكم أقل\n- **C++** مثل قيادة سيارة سباق يدوية - تحكم أكبر، سرعة أكبر، مسؤولية أكبر\n\nC++ تعطيك **وصولاً مباشراً لعتاد الحاسوب** مع توفير ميزات برمجة حديثة في نفس الوقت.",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-speed-comparison.svg",
+          "alt": "Speed comparison chart showing C++ vs other languages",
+          "caption": "C++ is one of the fastest programming languages available",
+          "captionAr": "C++ من أسرع لغات البرمجة المتاحة"
+        }
+      ],
+      "notes": [
+        {
+          "term": "Compiled Language",
+          "description": "Code is translated directly to machine instructions, making it extremely fast",
+          "ar": "لغة مترجمة: الكود يُترجم مباشرة إلى تعليمات الآلة، مما يجعلها سريعة جداً"
+        },
+        {
+          "term": "Bjarne Stroustrup",
+          "description": "The Danish computer scientist who created C++ in 1979",
+          "ar": "عالم الحاسوب الدنماركي الذي أنشأ C++ عام 1979"
+        }
+      ]
+    },
+    {
+      "content": "## Who Uses C++? (Spoiler: Everyone!)\n\nC++ is not just a classroom language. It powers the **biggest and most important software in the world**:\n\n### 🎮 Gaming\n- **Unreal Engine** (Fortnite, Gears of War, Final Fantasy VII) - written entirely in C++\n- **PlayStation, Xbox, Nintendo** - their operating systems use C++\n- Almost every AAA game uses C++ for performance\n\n### 🖥️ Operating Systems\n- **Microsoft Windows** - core components in C++\n- **macOS and iOS** - significant C++ usage\n- **Linux kernel modules** - many in C++\n\n### 🌐 Web & Cloud\n- **Google Chrome** - the world's most popular browser\n- **Google Search engine** - performance-critical parts\n- **Amazon, Facebook, Microsoft** - backend systems\n\n### 🤖 AI & Science\n- **TensorFlow and PyTorch** - core engines in C++\n- **NASA** - spacecraft control systems\n- **CERN** - particle physics simulations\n\n### 📱 Apps You Use Daily\n- **Adobe Photoshop, Illustrator, Premiere**\n- **Spotify** - audio processing\n- **WhatsApp** - originally built with C++\n- **MySQL** - the world's most popular database",
+      "contentAr": "## من يستخدم C++؟ (مفاجأة: الجميع!)\n\nC++ ليست مجرد لغة تعليمية. إنها تُشغّل **أكبر وأهم البرمجيات في العالم**:\n\n### 🎮 الألعاب\n- **Unreal Engine** (فورتنايت، جيرز أوف وور، فاينل فانتازي 7) - مكتوبة بالكامل بـ C++\n- **PlayStation, Xbox, Nintendo** - أنظمتها تستخدم C++\n- تقريباً كل لعبة AAA تستخدم C++ للأداء\n\n### 🖥️ أنظمة التشغيل\n- **Microsoft Windows** - المكونات الأساسية بـ C++\n- **macOS و iOS** - استخدام كبير لـ C++\n- **Linux kernel modules** - كثير منها بـ C++\n\n### 🌐 الويب والسحابة\n- **Google Chrome** - المتصفح الأكثر شعبية في العالم\n- **محرك بحث Google** - الأجزاء الحرجة للأداء\n- **Amazon, Facebook, Microsoft** - الأنظمة الخلفية\n\n### 🤖 الذكاء الاصطناعي والعلوم\n- **TensorFlow و PyTorch** - المحركات الأساسية بـ C++\n- **NASA** - أنظمة التحكم بالمركبات الفضائية\n- **CERN** - محاكاة فيزياء الجسيمات\n\n### 📱 تطبيقات تستخدمها يومياً\n- **Adobe Photoshop, Illustrator, Premiere**\n- **Spotify** - معالجة الصوتيات",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-companies.svg",
+          "alt": "Logos of major companies using C++: Google, Microsoft, Adobe, Epic Games, NASA",
+          "caption": "The world's biggest tech companies rely on C++",
+          "captionAr": "أكبر شركات التقنية في العالم تعتمد على C++"
+        }
+      ],
+      "reminder": "If you've ever played a video game, used Photoshop, or browsed with Chrome - you've used C++!",
+      "reminderAr": "إذا سبق لك أن لعبت لعبة فيديو أو استخدمت Photoshop أو تصفحت بـ Chrome - فقد استخدمت C++!"
+    },
+    {
+      "content": "## Why Learn C++? Your Superpowers\n\nLearning C++ gives you **unique advantages** that other languages can't offer:\n\n### 1. 🚀 Unmatched Speed\nC++ programs run **10-100x faster** than interpreted languages like Python. When milliseconds matter (games, trading, real-time systems), C++ wins.\n\n### 2. 🔧 Complete Hardware Control\nYou can manage memory directly, talk to hardware, and optimize every byte. This is why C++ is used in:\n- Embedded systems (cars, medical devices, robots)\n- Game engines\n- Operating systems\n\n### 3. 💼 High-Paying Careers\nC++ developers are among the **highest-paid programmers**:\n- Game Developer: $80K - $150K/year\n- Systems Engineer: $100K - $180K/year\n- Quantitative Finance: $150K - $300K/year\n- Embedded Systems: $90K - $160K/year\n\n### 4. 🧠 Deep Understanding\nLearning C++ teaches you **how computers actually work**. This knowledge makes you better at EVERY programming language.\n\n### 5. 🌍 Massive Community\nOver 4 million C++ developers worldwide. You'll never be stuck without help.",
+      "contentAr": "## لماذا تتعلم C++؟ قوى خارقة لك!\n\nتعلم C++ يمنحك **مزايا فريدة** لا تستطيع لغات أخرى تقديمها:\n\n### 1. 🚀 سرعة لا مثيل لها\nبرامج C++ تعمل **أسرع 10-100 مرة** من اللغات المفسرة مثل Python. عندما تكون الأجزاء من الثانية مهمة (ألعاب، تداول مالي، أنظمة فورية)، تفوز C++.\n\n### 2. 🔧 تحكم كامل بالعتاد\nيمكنك إدارة الذاكرة مباشرة والتحدث مع العتاد وتحسين كل بايت. لهذا تُستخدم C++ في:\n- الأنظمة المدمجة (سيارات، أجهزة طبية، روبوتات)\n- محركات الألعاب\n- أنظمة التشغيل",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-career-paths.svg",
+          "alt": "Career paths diagram showing Game Dev, Systems Programming, Embedded, Finance with salary ranges",
+          "caption": "C++ opens doors to high-paying specialized careers",
+          "captionAr": "C++ تفتح أبواباً لمهن متخصصة عالية الأجر"
+        }
+      ],
+      "reminder": "C++ is not just a language - it's a superpower that opens doors to the most exciting tech careers.",
+      "reminderAr": "C++ ليست مجرد لغة - إنها قوة خارقة تفتح أبواباً لأكثر المهن التقنية إثارة."
+    },
+    {
+      "content": "## What Will You Build?\n\nBy the end of this course, you'll be able to build **real, working projects**:\n\n- 🎮 A simple 2D game with player movement and collision\n- 📁 A file manager that organizes your computer\n- 🧮 A scientific calculator with advanced functions\n- 📊 A data processor that reads and analyzes files\n- 🤖 A simple AI chatbot\n\nBut first, let's start with the basics. In the next lessons, you'll:\n1. Set up your C++ development environment\n2. Write your very first C++ program\n3. Understand how C++ programs are structured\n4. Learn the building blocks of every C++ program\n\n**Remember**: Every expert was once a beginner. The journey of a thousand miles begins with a single step - and you just took it!",
+      "contentAr": "## ماذا ستبني؟\n\nبنهاية هذه الدورة، ستكون قادراً على بناء **مشاريع حقيقية تعمل**:\n\n- 🎮 لعبة ثنائية الأبعاد بسيطة مع حركة اللاعب والتصادمات",
+      "reminder": "Every expert was once a beginner. You just took your first step into the world of C++!",
+      "reminderAr": "كل خبير كان يوماً مبتدئاً. لقد خطوت للتو خطوتك الأولى في عالم C++!"
+    }
+  ],
+  "examples": [
+    {
+      "title": "The Simplest C++ Program",
+      "titleAr": "أبسط برنامج C++",
+      "description": "This is what a C++ program looks like. Don't worry about understanding every line yet - we'll cover each part in upcoming lessons!",
+      "descriptionAr": "هذا ما يبدو عليه برنامج C++. لا تقلق بشأن فهم كل سطر بعد - سنغطي كل جزء في الدروس القادمة!",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello, World!\" << endl;\n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Hello, World!"
+    },
+    {
+      "title": "What Each Line Does",
+      "titleAr": "ما يفعله كل سطر",
+      "description": "A quick peek at what each line of the program does (we'll learn all this in detail later):",
+      "descriptionAr": "نظرة سريعة على ما يفعله كل سطر في البرنامج (سنتعلم كل هذا بالتفصيل لاحقاً):",
+      "code": "// Line 1: Include the input/output library\n#include <iostream>\n\n// Line 2: Use the standard namespace (shortcut)\nusing namespace std;\n\n// Line 3: The main function - where every program starts\nint main() {\n    // Line 4: Print text to the screen\n    cout << \"Hello from C++!\" << endl;\n    \n    // Line 5: Tell the program everything went well\n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Hello from C++!"
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "Who created C++?",
+      "promptAr": "من أنشأ C++؟",
+      "multipleCorrect": false,
+      "options": ["Bill Gates", "Bjarne Stroustrup", "Dennis Ritchie", "Linus Torvalds"],
+      "correct": 1,
+      "explanation": "Bjarne Stroustrup created C++ in 1979 at Bell Labs. Dennis Ritchie created C, which C++ was built upon.",
+      "explanationAr": "بيارن ستروستروب أنشأ C++ عام 1979 في مختبرات بيل. دينيس ريتشي أنشأ C التي بُنيت عليها C++.",
+      "points": 10
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which of these famous software products uses C++? (Select all that apply)",
+      "promptAr": "أي من هذه المنتجات الشهيرة تستخدم C++؟ (اختر كل ما ينطبق)",
+      "multipleCorrect": true,
+      "options": ["Google Chrome", "Unreal Engine", "Adobe Photoshop", "Microsoft Word", "All of them"],
+      "correct": [0, 1, 2, 3, 4],
+      "explanation": "All of these major software products use C++ for their performance-critical components!",
+      "explanationAr": "كل هذه المنتجات البرمجية الكبرى تستخدم C++ لمكوناتها الحرجة للأداء!",
+      "points": 10
+    },
+    {
+      "type": "mcq",
+      "prompt": "What is C++ known for compared to Python?",
+      "promptAr": "بماذا تشتهر C++ مقارنة بـ Python؟",
+      "multipleCorrect": false,
+      "options": [
+        "Easier syntax",
+        "Faster execution speed",
+        "Better for web development",
+        "More beginners use it"
+      ],
+      "correct": 1,
+      "explanation": "C++ is compiled to machine code, making it 10-100x faster than interpreted languages like Python.",
+      "explanationAr": "C++ تُترجم إلى كود الآلة، مما يجعلها أسرع 10-100 مرة من اللغات المفسرة مثل Python.",
+      "points": 10
+    },
+    {
+      "type": "mcq",
+      "prompt": "In which year was C++ created?",
+      "promptAr": "في أي سنة أُنشئت C++؟",
+      "multipleCorrect": false,
+      "options": ["1972", "1979", "1985", "1990"],
+      "correct": 1,
+      "explanation": "C++ was created in 1979 by Bjarne Stroustrup. It was originally called 'C with Classes'.",
+      "explanationAr": "أُنشئت C++ عام 1979 على يد بيارن ستروستروب. كانت تسمى في الأصل 'C مع الفئات'.",
+      "points": 10
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which industry uses C++ the most for performance-critical applications?",
+      "promptAr": "أي صناعة تستخدم C++ أكثر للتطبيقات الحرجة للأداء؟",
+      "multipleCorrect": false,
+      "options": [
+        "Web Development",
+        "Mobile Apps",
+        "Game Development",
+        "Data Entry"
+      ],
+      "correct": 2,
+      "explanation": "Game development relies heavily on C++ because games need maximum performance for graphics and physics calculations.",
+      "explanationAr": "تطوير الألعاب يعتمد بشدة على C++ لأن الألعاب تحتاج أقصى أداء لحسابات الرسوميات والفيزياء.",
+      "points": 10
+    },
+    {
+      "type": "find_line",
+      "prompt": "In this simple C++ program, which line prints text to the screen?",
+      "promptAr": "في هذا البرنامج البسيط، أي سطر يطبع نصاً على الشاشة؟",
+      "findWhat": "specific_action",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello, World!\" << endl;\n    return 0;\n}",
+      "correctLine": 5,
+      "explanation": "The cout statement on line 5 is what prints text to the screen.",
+      "explanationAr": "عبارة cout في السطر 5 هي التي تطبع النص على الشاشة.",
+      "points": 10
+    },
+    {
+      "type": "order_lines",
+      "prompt": "Arrange these lines to create a valid C++ program that prints 'I love C++!':",
+      "promptAr": "رتب هذه الأسطر لإنشاء برنامج C++ صحيح يطبع 'I love C++!':",
+      "items": [
+        "    cout << \"I love C++!\" << endl;",
+        "#include <iostream>",
+        "int main() {",
+        "    return 0;",
+        "using namespace std;",
+        "}"
+      ],
+      "validOrderings": [
+        ["#include <iostream>", "using namespace std;", "int main() {", "    cout << \"I love C++!\" << endl;", "    return 0;", "}"]
+      ],
+      "explanation": "A C++ program needs: includes first, then namespace, then main() function with code inside, and a closing brace.",
+      "explanationAr": "برنامج C++ يحتاج: التضمينات أولاً، ثم مساحة الاسم، ثم دالة main() مع الكود داخلها، وقوس الإغلاق.",
+      "points": 15
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "Complete this C++ program that prints 'Hello from C++!':",
+      "promptAr": "أكمل برنامج C++ هذا الذي يطبع 'Hello from C++!':",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    {0} << \"Hello from C++!\" << endl;\n    return {1};\n}",
+      "blanks": [
+        {
+          "blankType": "text",
+          "answers": ["cout"],
+          "placeholder": "output command"
+        },
+        {
+          "blankType": "dropdown",
+          "options": ["0", "1", "true", "null"],
+          "answers": ["0"]
+        }
+      ],
+      "explanation": "cout is the console output object. return 0 tells the operating system the program ended successfully.",
+      "explanationAr": "cout هو كائن إخراج وحدة التحكم. return 0 تخبر نظام التشغيل أن البرنامج انتهى بنجاح.",
+      "points": 10
+    }
+  ]
+}

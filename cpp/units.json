@@ -1,0 +1,117 @@
+{
+  "language": "cpp",
+  "units": [
+    {
+      "id": "unit-01",
+      "number": 1,
+      "title": "Your First Steps in C++",
+      "titleAr": "خطواتك الأولى في C++",
+      "description": "Discover what C++ is, why the world's biggest companies use it, and write your very first program.",
+      "descriptionAr": "اكتشف ما هي C++ ولماذا تستخدمها أكبر شركات العالم، واكتب أول برنامج لك."
+    },
+    {
+      "id": "unit-02",
+      "number": 2,
+      "title": "Storing and Using Data",
+      "titleAr": "تخزين البيانات واستخدامها",
+      "description": "Master variables, data types, operators, and how to make your programs interact with users.",
+      "descriptionAr": "أتقن المتغيرات وأنواع البيانات والعمليات وكيفية جعل برامجك تتفاعل مع المستخدمين."
+    },
+    {
+      "id": "unit-03",
+      "number": 3,
+      "title": "Making Decisions",
+      "titleAr": "اتخاذ القرارات",
+      "description": "Learn conditional logic with if/else, switch statements, and how programs make choices.",
+      "descriptionAr": "تعلم المنطق الشرطي مع if/else وعبارات switch وكيف تتخذ البرامج قرارات."
+    },
+    {
+      "id": "unit-04",
+      "number": 4,
+      "title": "Repeating Actions",
+      "titleAr": "تكرار الإجراءات",
+      "description": "Master loops (for, while, do-while) and learn how to automate repetitive tasks.",
+      "descriptionAr": "أتقن الحلقات (for, while, do-while) وتعلم كيفية أتمتة المهام المتكررة."
+    },
+    {
+      "id": "unit-05",
+      "number": 5,
+      "title": "Building Reusable Blocks",
+      "titleAr": "بناء كتل قابلة لإعادة الاستخدام",
+      "description": "Learn functions, parameters, return values, and how to organize your code into reusable pieces.",
+      "descriptionAr": "تعلم الدوال والوسائط والقيم المُرجعة وكيفية تنظيم كودك في قطع قابلة لإعادة الاستخدام."
+    },
+    {
+      "id": "unit-06",
+      "number": 6,
+      "title": "Working with Collections",
+      "titleAr": "العمل مع المجموعات",
+      "description": "Master arrays, vectors, and strings to store and manipulate collections of data.",
+      "descriptionAr": "أتقن المصفوفات والمتجهات والسلاسل لتخزين مجموعات البيانات ومعالجتها."
+    },
+    {
+      "id": "unit-07",
+      "number": 7,
+      "title": "Pointers and Memory",
+      "titleAr": "المؤشرات والذاكرة",
+      "description": "Understand pointers, references, dynamic memory, and how C++ manages computer memory directly.",
+      "descriptionAr": "افهم المؤشرات والمراجع والذاكرة الديناميكية وكيف تدير C++ ذاكرة الحاسوب مباشرة."
+    },
+    {
+      "id": "unit-08",
+      "number": 8,
+      "title": "Designing with Classes",
+      "titleAr": "التصميم باستخدام الفئات",
+      "description": "Learn Object-Oriented Programming: classes, objects, encapsulation, and constructors.",
+      "descriptionAr": "تعلم البرمجة الكائنية: الفئات والكائنات والتغليف والمُنشئات."
+    },
+    {
+      "id": "unit-09",
+      "number": 9,
+      "title": "Advanced OOP",
+      "titleAr": "البرمجة الكائنية المتقدمة",
+      "description": "Master inheritance, polymorphism, virtual functions, and abstract classes.",
+      "descriptionAr": "أتقن الوراثة والتعدد الشكلي والدوال الافتراضية والفئات المجردة."
+    },
+    {
+      "id": "unit-10",
+      "number": 10,
+      "title": "Handling Errors Gracefully",
+      "titleAr": "معالجة الأخطاء بأناقة",
+      "description": "Learn exception handling, try/catch/throw, and how to build robust programs.",
+      "descriptionAr": "تعلم معالجة الاستثناءات و try/catch/throw وكيفية بناء برامج قوية."
+    },
+    {
+      "id": "unit-11",
+      "number": 11,
+      "title": "Working with Files",
+      "titleAr": "العمل مع الملفات",
+      "description": "Read and write files, handle binary data, and persist your program's data.",
+      "descriptionAr": "اقرأ واكتب الملفات وعالج البيانات الثنائية واحفظ بيانات برنامجك."
+    },
+    {
+      "id": "unit-12",
+      "number": 12,
+      "title": "The Power of Templates",
+      "titleAr": "قوة القوالب",
+      "description": "Master templates, generic programming, and the Standard Template Library (STL).",
+      "descriptionAr": "أتقن القوالب والبرمجة العامة ومكتبة القوالب القياسية (STL)."
+    },
+    {
+      "id": "unit-13",
+      "number": 13,
+      "title": "Modern C++ Features",
+      "titleAr": "ميزات C++ الحديثة",
+      "description": "Explore C++11/14/17/20 features: smart pointers, lambdas, auto, move semantics.",
+      "descriptionAr": "استكشف ميزات C++11/14/17/20: المؤشرات الذكية واللامدا و auto ودلالات النقل."
+    },
+    {
+      "id": "unit-14",
+      "number": 14,
+      "title": "Real-World Applications",
+      "titleAr": "تطبيقات العالم الحقيقي",
+      "description": "Build complete projects: a game engine component, a file manager, and a data processor.",
+      "descriptionAr": "ابنِ مشاريع كاملة: محرك ألعاب بسيط ومدير ملفات ومعالج بيانات."
+    }
+  ]
+}

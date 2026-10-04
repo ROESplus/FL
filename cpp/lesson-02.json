@@ -1,0 +1,208 @@
+{
+  "id": "lesson-02",
+  "type": "lesson",
+  "unit": "unit-01",
+  "lessonInUnit": 2,
+  "skill": "Setting Up Your Workshop",
+  "skillAr": "إعداد ورشة عملك",
+  "title": "Your First C++ Program: Hello, World!",
+  "titleAr": "أول برنامج C++ لك: مرحباً بالعالم!",
+  "sections": [
+    {
+      "content": "## Before vs After: The Setup Journey\n\n**Before**: To write a C++ program, you needed to install complex compilers, configure paths, and edit code in basic text editors. It was intimidating!\n\n**After**: Modern tools like **Code::Blocks**, **Visual Studio**, or even our built-in editor make setup take just a few minutes.\n\nThink of setting up your C++ environment like setting up a **workshop**:\n- The **compiler** (g++) is your toolbox - it translates your blueprints (code) into a working machine (program)\n- The **editor** is your workbench - where you write your blueprints\n- The **terminal** is your testing area - where you see if your machine works\n\nIn FULL_Lingual, the compiler is already handled for you. You just need to write code and click Run!",
+      "contentAr": "## قبل وبعد: رحلة الإعداد\n\n**قبل**: لكتابة برنامج C++، كنت تحتاج لتثبيت مترجمات معقدة وتكوين المسارات وتحرير الكود في محررات نصية أساسية. كان الأمر مخيفاً!\n\n**بعد**: أدوات حديثة مثل **Code::Blocks** أو **Visual Studio** أو حتى محررنا المدمج تجعل الإعداد يستغرق دقائق فقط.\n\nفكر في إعداد بيئة C++ كإعداد **ورشة عمل**:\n- **المترجم** (g++) هو صندوق أدواتك - يترجم مخططاتك (الكود) إلى آلة عاملة (برنامج)\n- **المحرر** هو طاولة عملك - حيث تكتب مخططاتك",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-workshop-setup.svg",
+          "alt": "Diagram showing compiler as toolbox, editor as workbench, terminal as testing area",
+          "caption": "Your C++ workshop: Compiler (toolbox) + Editor (workbench) + Terminal (testing)",
+          "captionAr": "ورشة C++ الخاصة بك: المترجم (صندوق أدوات) + المحرر (طاولة عمل) + الطرفية (اختبار)"
+        }
+      ],
+      "notes": [
+        {
+          "term": "Compiler",
+          "description": "A program that translates your C++ code into machine code the computer can execute",
+          "ar": "المترجم: برنامج يترجم كود C++ الخاص بك إلى كود آلة يمكن للحاسوب تنفيذه"
+        },
+        {
+          "term": "g++",
+          "description": "The GNU C++ compiler, one of the most popular free compilers",
+          "ar": "g++: مترجم GNU لـ C++، أحد أشهر المترجمات المجانية"
+        }
+      ],
+      "reminder": "In FULL_Lingual, you don't need to install anything extra. Just write code and click Run!",
+      "reminderAr": "في FULL_Lingual، لا تحتاج لتثبيت أي شيء إضافي. فقط اكتب الكود واضغط تشغيل!"
+    },
+    {
+      "content": "## Writing Your First Program\n\nLet's write the most famous program in programming history: **Hello, World!**\n\nEvery programmer starts here. It's a tradition that began in 1978 with the book \"The C Programming Language\".\n\nHere's what the program looks like:\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello, World!\" << endl;\n    return 0;\n}\n```\n\nDon't panic! We'll understand every single line in the next lesson. For now, just know:\n- This program **prints text** to the screen\n- Every C++ program has this **basic structure**\n- You'll write hundreds of programs like this!\n\n### The Magic Moment\nWhen you click **Run**, the computer:\n1. **Compiles** your code (translates it to machine language)\n2. **Executes** the machine code\n3. **Shows** the output: `Hello, World!`\n\nThis process happens in milliseconds, but it's the same process used to build operating systems and game engines!",
+      "contentAr": "## كتابة أول برنامج لك\n\nلنكتب أشهر برنامج في تاريخ البرمجة: **مرحباً بالعالم!**\n\nكل مبرمج يبدأ من هنا. إنها تقليد بدأ عام 1978 مع كتاب \"لغة البرمجة C\".\n\nإليك كيف يبدو البرنامج:\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello, World!\" << endl;\n    return 0;\n}\n```\n\nلا تقلق! سنفهم كل سطر في الدرس التالي. الآن، فقط اعرف:\n- هذا البرنامج **يطبع نصاً** على الشاشة",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello, World!\" << endl;\n    return 0;\n}",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-compilation-flow.svg",
+          "alt": "Flow diagram: Source Code -> Compiler -> Machine Code -> Execution -> Output",
+          "caption": "The compilation process: your code becomes a running program",
+          "captionAr": "عملية الترجمة: كودك يصبح برنامجاً يعمل"
+        }
+      ],
+      "reminder": "Every expert programmer once wrote 'Hello, World!' for the first time. You're in good company!",
+      "reminderAr": "كل مبرمج خبير كتب 'مرحباً بالعالم!' لأول مرة. أنت في صحبة جيدة!"
+    },
+    {
+      "content": "## Common Mistakes (And Why They Happen)\n\nEvery beginner makes these mistakes. Knowing them in advance saves you hours of frustration!\n\n### Mistake 1: Forgetting the Semicolon\n```cpp\ncout << \"Hello\" << endl   // ❌ Missing semicolon\ncout << \"Hello\" << endl;  // ✅ Correct\n```\n**Why**: C++ uses `;` to mark the end of every statement. Like a period at the end of a sentence.\n\n### Mistake 2: Wrong Capitalization\n```cpp\nCout << \"Hello\";  // ❌ 'C' is uppercase\ncout << \"Hello\";  // ✅ 'c' is lowercase\n```\n**Why**: C++ is **case-sensitive**. `cout`, `Cout`, and `COUT` are three different things!\n\n### Mistake 3: Missing Quotes\n```cpp\ncout << Hello << endl;    // ❌ No quotes around text\ncout << \"Hello\" << endl;  // ✅ Text in double quotes\n```\n**Why**: Text must be inside `\"double quotes\"` so the compiler knows it's text, not code.\n\n### Mistake 4: Forgetting main()\nEvery C++ program **must** have a `main()` function. Without it, the program doesn't know where to start!",
+      "contentAr": "## الأخطاء الشائعة (ولماذا تحدث)\n\nكل مبتدئ يرتكب هذه الأخطاء. معرفتها مسبقاً توفر عليك ساعات من الإحباط!\n\n### الخطأ 1: نسيان الفاصلة المنقوطة",
+      "notes": [
+        {
+          "term": "Semicolon (;)",
+          "description": "Marks the end of a statement in C++, like a period in English",
+          "ar": "الفاصلة المنقوطة (;): تحدد نهاية العبارة في C++، مثل النقطة في اللغة العربية"
+        },
+        {
+          "term": "Case-Sensitive",
+          "description": "C++ distinguishes between uppercase and lowercase letters",
+          "ar": "حساسية حالة الأحرف: C++ تفرق بين الأحرف الكبيرة والصغيرة"
+        }
+      ],
+      "reminder": "Errors are not failures - they're learning opportunities. Every error message teaches you something new!",
+      "reminderAr": "الأخطاء ليست فشلاً - إنها فرص للتعلم. كل رسالة خطأ تعلمك شيئاً جديداً!"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Hello, World! - The Classic",
+      "titleAr": "مرحباً بالعالم! - الكلاسيكي",
+      "description": "The traditional first program every programmer writes",
+      "descriptionAr": "البرنامج الأول التقليدي الذي يكتبه كل مبرمج",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello, World!\" << endl;\n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Hello, World!"
+    },
+    {
+      "title": "Printing Multiple Lines",
+      "titleAr": "طباعة عدة أسطر",
+      "description": "You can print as many lines as you want",
+      "descriptionAr": "يمكنك طباعة أي عدد من الأسطر تريد",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Line 1: Hello!\" << endl;\n    cout << \"Line 2: I am learning C++\" << endl;\n    cout << \"Line 3: This is fun!\" << endl;\n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Line 1: Hello!\nLine 2: I am learning C++\nLine 3: This is fun!"
+    },
+    {
+      "title": "Printing Without endl",
+      "titleAr": "الطباعة بدون endl",
+      "description": "See what happens when you don't use endl (no new line)",
+      "descriptionAr": "شاهد ماذا يحدث عندما لا تستخدم endl (لا سطر جديد)",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Without endl - everything on one line\n    cout << \"Hello \";\n    cout << \"World \";\n    cout << \"Together!\";\n    \n    cout << endl;\n    \n    // With endl - each on its own line\n    cout << \"Hello\" << endl;\n    cout << \"World\" << endl;\n    cout << \"Separate!\" << endl;\n    \n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Hello World Together!\nHello\nWorld\nSeparate!"
+    },
+    {
+      "title": "Your Name Here!",
+      "titleAr": "اسمك هنا!",
+      "description": "Personalize the program with your own message",
+      "descriptionAr": "خصص البرنامج برسالتك الخاصة",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"========================\" << endl;\n    cout << \"  My First C++ Program  \" << endl;\n    cout << \"========================\" << endl;\n    cout << endl;\n    cout << \"Hi! I'm learning C++!\" << endl;\n    cout << \"This is my workshop.\" << endl;\n    cout << \"Let's build something amazing!\" << endl;\n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "========================\n  My First C++ Program  \n========================\n\nHi! I'm learning C++!\nThis is my workshop.\nLet's build something amazing!"
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "What does the compiler do?",
+      "promptAr": "ماذا يفعل المترجم؟",
+      "multipleCorrect": false,
+      "options": [
+        "Writes code for you",
+        "Translates C++ code to machine code",
+        "Fixes your errors automatically",
+        "Connects to the internet"
+      ],
+      "correct": 1,
+      "explanation": "The compiler translates your human-readable C++ code into machine code that the computer can execute directly.",
+      "explanationAr": "المترجم يترجم كود C++ المقروء بشرياً إلى كود آلة يمكن للحاسوب تنفيذه مباشرة.",
+      "points": 10
+    },
+    {
+      "type": "find_line",
+      "prompt": "Which line has an error in this program?",
+      "promptAr": "أي سطر يحتوي على خطأ في هذا البرنامج؟",
+      "findWhat": "error",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    Cout << \"Hello\" << endl;\n    return 0;\n}",
+      "correctLine": 5,
+      "explanation": "Line 5 has 'Cout' with uppercase C. C++ is case-sensitive, it must be 'cout' with lowercase c.",
+      "explanationAr": "السطر 5 يحتوي على 'Cout' بحرف C كبير. C++ حساسة لحالة الأحرف، يجب أن تكون 'cout' بحرف c صغير.",
+      "points": 10
+    },
+    {
+      "type": "code_write",
+      "prompt": "Write a complete C++ program that prints 'I am ready to learn C++!' on the screen.",
+      "promptAr": "اكتب برنامج C++ كامل يطبع 'I am ready to learn C++!' على الشاشة.",
+      "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Write your code here\n    \n    return 0;\n}",
+      "validation": {
+        "mustContain": ["cout", "I am ready to learn C++!", "endl"],
+        "expectedOutput": "I am ready to learn C++!"
+      },
+      "allowRun": true,
+      "explanation": "Use cout << \"I am ready to learn C++!\" << endl; inside main()",
+      "explanationAr": "استخدم cout << \"I am ready to learn C++!\" << endl; داخل main()",
+      "points": 15
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "Complete this program to print 'Learning is fun!':",
+      "promptAr": "أكمل هذا البرنامج لطباعة 'Learning is fun!':",
+      "code": "#include <iostream>\nusing namespace std;\n\nint {0}() {\n    {1} << \"Learning is fun!\" << {2};\n    return 0;\n}",
+      "blanks": [
+        {
+          "blankType": "text",
+          "answers": ["main"],
+          "placeholder": "function name"
+        },
+        {
+          "blankType": "dropdown",
+          "options": ["cout", "cin", "print", "echo"],
+          "answers": ["cout"]
+        },
+        {
+          "blankType": "text",
+          "answers": ["endl"],
+          "placeholder": "end line"
+        }
+      ],
+      "explanation": "main() is the entry point, cout prints output, endl creates a new line.",
+      "explanationAr": "main() هي نقطة الدخول، cout تطبع المخرجات، endl تنشئ سطراً جديداً.",
+      "points": 10
+    },
+    {
+      "type": "mcq",
+      "prompt": "What symbol marks the end of a statement in C++?",
+      "promptAr": "ما الرمز الذي يحدد نهاية العبارة في C++؟",
+      "multipleCorrect": false,
+      "options": [".", ",", ";", ":"],
+      "correct": 2,
+      "explanation": "The semicolon (;) marks the end of every statement in C++, like a period ends a sentence.",
+      "explanationAr": "الفاصلة المنقوطة (;) تحدد نهاية كل عبارة في C++، مثل النقطة تنهي الجملة.",
+      "points": 10
+    },
+    {
+      "type": "order_lines",
+      "prompt": "Arrange these lines to create a valid C++ program:",
+      "promptAr": "رتب هذه الأسطر لإنشاء برنامج C++ صحيح:",
+      "items": [
+        "    return 0;",
+        "#include <iostream>",
+        "    cout << \"My first program!\" << endl;",
+        "int main() {",
+        "using namespace std;",
+        "}"
+      ],
+      "validOrderings": [
+        ["#include <iostream>", "using namespace std;", "int main() {", "    cout << \"My first program!\" << endl;", "    return 0;", "}"]
+      ],
+      "explanation": "Includes first, then namespace, then main() with cout and return inside, ending with closing brace.",
+      "explanationAr": "التضمينات أولاً، ثم مساحة الاسم، ثم main() مع cout و return داخلها، تنتهي بقوس الإغلاق.",
+      "points": 15
+    }
+  ]
+}

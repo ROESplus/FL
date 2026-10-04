@@ -1,0 +1,43 @@
+{
+  "id": "cpp",
+  "name": "C++",
+  "nameAr": "سي بلس بلس",
+  "description": "Learn C++ from basics to modern C++20 and build high-performance applications used in games, operating systems, and embedded systems.",
+  "descriptionAr": "تعلم C++ من الأساسيات إلى C++20 الحديثة وابنِ تطبيقات عالية الأداء تُستخدم في الألعاب وأنظمة التشغيل والأنظمة المدمجة.",
+  "icon": "cpp.svg",
+  "categories": ["Games", "Systems", "Performance", "Embedded"],
+  "categoriesAr": ["ألعاب", "أنظمة", "أداء عالي", "أنظمة مدمجة"],
+  "totalUnits": 14,
+  "totalLessons": 127,
+  "highlightLang": "cpp",
+  "codemirrorMode": "clike",
+  "runCommandName": "g++",
+  "runCommand": "g++ {file} -o {output} && {output}",
+  "fileExtension": ".cpp",
+  "requirements": [
+    {
+      "id": "gcc-compiler",
+      "name": "GCC Compiler (MinGW)",
+      "nameAr": "مترجم GCC (MinGW)",
+      "size": "180 MB",
+      "sizeAr": "180 ميجابايت",
+      "checkCommand": "g++ --version",
+      "versionPattern": "g\\+\\+ \\(.*\\) [0-9]+\\.[0-9]+",
+      "winget": "MSYS2.MSYS2",
+      "choco": "mingw",
+      "installFlags": ""
+    },
+    {
+      "id": "cmake",
+      "name": "CMake (optional)",
+      "nameAr": "CMake (اختياري)",
+      "size": "45 MB",
+      "sizeAr": "45 ميجابايت",
+      "checkCommand": "cmake --version",
+      "versionPattern": "cmake version [0-9]+\\.[0-9]+",
+      "winget": "Kitware.CMake",
+      "choco": "cmake",
+      "installFlags": ""
+    }
+  ]
+}

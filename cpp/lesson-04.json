@@ -1,0 +1,250 @@
+{
+  "id": "lesson-04",
+  "type": "lesson",
+  "unit": "unit-01",
+  "lessonInUnit": 4,
+  "skill": "Storing Information in Variables",
+  "skillAr": "تخزين المعلومات في المتغيرات",
+  "title": "Variables: Boxes That Remember",
+  "titleAr": "المتغيرات: صناديق تتذكر",
+  "sections": [
+    {
+      "content": "## Before vs After Variables\n\n**Before variables**: Imagine you're a chef cooking without containers. You'd have to remember every ingredient in your head. If you calculated that you need 250g of flour, you'd have to recalculate it every time!\n\n**After variables**: You have labeled containers. \"Flour: 250g\", \"Sugar: 100g\", \"Eggs: 3\". You can open any container anytime and use what's inside.\n\n**Variables in C++ work exactly like labeled boxes:**\n- The **label** = variable name\n- The **box size** = data type (determines what can fit inside)\n- The **content** = the value stored\n\n```cpp\nint age = 25;        // Box labeled 'age', holds number 25\ndouble price = 9.99; // Box labeled 'price', holds decimal 9.99\nchar grade = 'A';    // Box labeled 'grade', holds letter A\nstring name = \"Ali\"; // Box labeled 'name', holds text \"Ali\"\n```\n\nEach box can only hold **one type** of content. You can't put text in a number box!",
+      "contentAr": "## قبل وبعد المتغيرات",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-variable-boxes.svg",
+          "alt": "Four labeled boxes: age=25, price=9.99, grade=A, name=Ali",
+          "caption": "Variables are like labeled boxes, each holding one type of data",
+          "captionAr": "المتغيرات مثل الصناديق المعنونة، كل واحد يحمل نوعاً واحداً من البيانات"
+        }
+      ],
+      "notes": [
+        {
+          "term": "Variable",
+          "description": "A named storage location in memory that holds a value",
+          "ar": "المتغير: موقع تخزين مسمى في الذاكرة يحمل قيمة"
+        },
+        {
+          "term": "Data Type",
+          "description": "Defines what kind of data a variable can hold (number, text, etc.)",
+          "ar": "نوع البيانات: يحدد نوع البيانات التي يمكن للمتغير حملها (رقم، نص، إلخ)"
+        }
+      ],
+      "reminder": "Think of the data type as the SIZE of the box. A small box can't hold a big item!",
+      "reminderAr": "فكر في نوع البيانات كحجم الصندوق. الصندوق الصغير لا يستطيع حمل غرض كبير!"
+    },
+    {
+      "content": "## The Basic Data Types\n\nC++ has several built-in data types. Here are the most important ones:\n\n| Type | Stores | Example | Size |\n|------|--------|---------|------|\n| `int` | Whole numbers | 42, -7, 0 | 4 bytes |\n| `double` | Decimal numbers | 3.14, -2.5 | 8 bytes |\n| `char` | Single character | 'A', '7', '$' | 1 byte |\n| `string` | Text | \"Hello\", \"C++\" | Variable |\n| `bool` | True/False | true, false | 1 byte |\n\n### Creating Variables (Declaration)\n```cpp\nint age = 25;           // Integer\nint year = 2026;        // Another integer\ndouble temperature = 36.6;  // Decimal\nchar initial = 'M';     // Single character (single quotes!)\nstring name = \"Mohammed\";   // Text (double quotes!)\nbool isStudent = true;  // Boolean\n```\n\n### The Golden Rules:\n1. **Declare before use**: `int x;` then `x = 10;`\n2. **One type per variable**: An int can't suddenly hold text\n3. **Meaningful names**: `age` is better than `x`\n4. **Start with letter or underscore**: `_count` ✅, `2count` ❌\n5. **No spaces**: `myVariable` ✅, `my variable` ❌",
+      "contentAr": "## أنواع البيانات الأساسية",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Different data types\n    int age = 25;\n    double height = 1.75;\n    char grade = 'A';\n    string name = \"Student\";\n    bool isHappy = true;\n    \n    // Print them all\n    cout << \"Name: \" << name << endl;\n    cout << \"Age: \" << age << endl;\n    cout << \"Height: \" << height << \" m\" << endl;\n    cout << \"Grade: \" << grade << endl;\n    cout << \"Happy: \" << isHappy << endl;\n    \n    return 0;\n}",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-data-types.svg",
+          "alt": "Visual representation of data types with box sizes",
+          "caption": "Each data type has a different size and purpose",
+          "captionAr": "كل نوع بيانات له حجم وغرض مختلف"
+        }
+      ]
+    },
+    {
+      "content": "## Changing What's Inside the Box\n\nThe beautiful thing about variables is that they're **variable** - they can change!\n\n```cpp\nint score = 0;        // Box starts with 0\nscore = 10;           // Now it holds 10\nscore = score + 5;    // Now it holds 15\n```\n\nThink of it like a **whiteboard**: you can erase the old number and write a new one. The label stays the same, but the content changes.\n\n### The Assignment Operator (=)\n**CRITICAL**: In C++, `=` does NOT mean \"equals\" like in math!\n- `=` means \"**put this value into the box**\" (assignment)\n- `==` means \"**is this equal to?**\" (comparison)\n\n```cpp\nint x = 10;    // PUT 10 into box x\nif (x == 10)   // CHECK if x equals 10\n```\n\nThis is the **#1 mistake** beginners make. Remember:\n- One `=` → **Give** a value\n- Two `==` → **Check** a value",
+      "contentAr": "## تغيير ما بداخل الصندوق",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Variables can change!\n    int score = 0;\n    cout << \"Start: \" << score << endl;\n    \n    score = 10;\n    cout << \"After setting to 10: \" << score << endl;\n    \n    score = score + 5;\n    cout << \"After adding 5: \" << score << endl;\n    \n    score = score * 2;\n    cout << \"After doubling: \" << score << endl;\n    \n    // The = vs == difference\n    int x = 42;           // Assignment: put 42 in x\n    \n    if (x == 42) {        // Comparison: is x equal to 42?\n        cout << \"x is 42!\" << endl;\n    }\n    \n    return 0;\n}",
+      "reminder": "One = gives. Two == checks. Never mix them up!",
+      "reminderAr": "واحدة = تعطي. اثنتان == تتحققان. أبداً لا تخلط بينهما!"
+    },
+    {
+      "content": "## Naming Variables: The Art of Good Names\n\nVariable names are like **labels on boxes**. A good label tells you what's inside without opening the box.\n\n### ✅ Good Names:\n```cpp\nint studentAge = 20;\ndouble productPrice = 29.99;\nstring firstName = \"Ahmed\";\nbool isLoggedIn = true;\n```\n\n### ❌ Bad Names:\n```cpp\nint a = 20;          // What is 'a'?\ndouble x = 29.99;    // What is 'x'?\nstring s = \"Ahmed\";  // What is 's'?\nbool b = true;       // What is 'b'?\n```\n\n### Naming Rules:\n1. Must start with a **letter** or **underscore** (_)\n2. Can contain letters, numbers, and underscores\n3. **Cannot** contain spaces or special characters\n4. **Cannot** be a C++ keyword (int, return, if, etc.)\n5. C++ is **case-sensitive**: `Age`, `age`, and `AGE` are different!\n\n### Naming Convention (camelCase):\n```cpp\nint studentAge;      // ✅ camelCase (recommended)\nint StudentAge;      // ✅ PascalCase (also acceptable)\nint student_age;     // ✅ snake_case (acceptable)\nint studentage;      // ❌ Hard to read\n```",
+      "contentAr": "## تسمية المتغيرات: فن الأسماء الجيدة",
+      "notes": [
+        {
+          "term": "camelCase",
+          "description": "Naming style where each word starts with uppercase except the first: myVariableName",
+          "ar": "camelCase: أسلوب تسمية حيث تبدأ كل كلمة بحرف كبير ما عدا الأولى: myVariableName"
+        },
+        {
+          "term": "Assignment (=)",
+          "description": "Puts a value into a variable (NOT equality!)",
+          "ar": "التعيين (=): يضع قيمة في متغير (ليس مساواة!)"
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "title": "All Basic Data Types",
+      "titleAr": "كل أنواع البيانات الأساسية",
+      "description": "Create and print variables of every basic type",
+      "descriptionAr": "أنشئ واطبع متغيرات من كل نوع أساسي",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Integer - whole numbers\n    int age = 25;\n    int year = 2026;\n    int negative = -10;\n    \n    // Double - decimal numbers\n    double pi = 3.14159;\n    double temperature = -5.5;\n    \n    // Char - single character\n    char grade = 'A';\n    char symbol = '#';\n    \n    // String - text\n    string name = \"C++ Student\";\n    string greeting = \"Hello, World!\";\n    \n    // Bool - true or false\n    bool isRaining = false;\n    bool hasPassed = true;\n    \n    // Print everything\n    cout << \"=== My Variables ===\" << endl;\n    cout << \"Age: \" << age << endl;\n    cout << \"Year: \" << year << endl;\n    cout << \"Pi: \" << pi << endl;\n    cout << \"Grade: \" << grade << endl;\n    cout << \"Name: \" << name << endl;\n    cout << \"Is Raining: \" << isRaining << endl;\n    \n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "=== My Variables ===\nAge: 25\nYear: 2026\nPi: 3.14159\nGrade: A\nName: C++ Student\nIs Raining: 0"
+    },
+    {
+      "title": "Changing Variable Values",
+      "titleAr": "تغيير قيم المتغيرات",
+      "description": "See how variables can be updated",
+      "descriptionAr": "شاهد كيف يمكن تحديث المتغيرات",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int lives = 3;\n    cout << \"Game Start - Lives: \" << lives << endl;\n    \n    lives = lives - 1;  // Lost a life\n    cout << \"After hit - Lives: \" << lives << endl;\n    \n    lives = lives - 1;  // Lost another life\n    cout << \"After hit - Lives: \" << lives << endl;\n    \n    lives = lives + 2;  // Found extra lives!\n    cout << \"Found bonus - Lives: \" << lives << endl;\n    \n    // Shortcut operators\n    int score = 100;\n    score += 50;   // Same as: score = score + 50\n    cout << \"Score after += 50: \" << score << endl;\n    \n    score -= 25;   // Same as: score = score - 25\n    cout << \"Score after -= 25: \" << score << endl;\n    \n    score *= 2;    // Same as: score = score * 2\n    cout << \"Score after *= 2: \" << score << endl;\n    \n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Game Start - Lives: 3\nAfter hit - Lives: 2\nAfter hit - Lives: 1\nFound bonus - Lives: 3\nScore after += 50: 150\nScore after -= 25: 125\nScore after *= 2: 250"
+    },
+    {
+      "title": "The = vs == Trap",
+      "titleAr": "فخ = مقابل ==",
+      "description": "See the critical difference between assignment and comparison",
+      "descriptionAr": "شاهد الفرق الحاسم بين التعيين والمقارنة",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 10;  // ASSIGNMENT: put 10 in x\n    \n    cout << \"x = \" << x << endl;\n    \n    // COMPARISON: check if x equals 10\n    if (x == 10) {\n        cout << \"x is 10! (comparison works)\" << endl;\n    }\n    \n    // COMPARISON: check if x equals 20\n    if (x == 20) {\n        cout << \"This won't print\" << endl;\n    } else {\n        cout << \"x is NOT 20 (comparison works)\" << endl;\n    }\n    \n    // Reassignment\n    x = 20;  // ASSIGNMENT: now x holds 20\n    cout << \"After x = 20, x is: \" << x << endl;\n    \n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "x = 10\nx is 10! (comparison works)\nx is NOT 20 (comparison works)\nAfter x = 20, x is: 20"
+    },
+    {
+      "title": "Student Profile Card",
+      "titleAr": "بطاقة ملف الطالب",
+      "description": "Use variables to create a student profile",
+      "descriptionAr": "استخدم المتغيرات لإنشاء ملف طالب",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Student information\n    string firstName = \"Ahmed\";\n    string lastName = \"Hassan\";\n    int age = 20;\n    double gpa = 3.85;\n    char bloodType = 'O';\n    bool isEnrolled = true;\n    \n    // Print profile card\n    cout << \"╔══════════════════════════╗\" << endl;\n    cout << \"║    STUDENT PROFILE       ║\" << endl;\n    cout << \"╠══════════════════════════╣\" << endl;\n    cout << \"║ Name: \" << firstName << \" \" << lastName << endl;\n    cout << \"║ Age: \" << age << endl;\n    cout << \"║ GPA: \" << gpa << endl;\n    cout << \"║ Blood: \" << bloodType << endl;\n    cout << \"║ Enrolled: \" << isEnrolled << endl;\n    cout << \"╚══════════════════════════╝\" << endl;\n    \n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "╔══════════════════════════╗\n║    STUDENT PROFILE       ║\n╠══════════════════════════╣\n║ Name: Ahmed Hassan\n║ Age: 20\n║ GPA: 3.85\n║ Blood: O\n║ Enrolled: 1\n╚══════════════════════════╝"
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "Which data type should you use to store a person's age (25)?",
+      "promptAr": "أي نوع بيانات يجب أن تستخدم لتخزين عمر شخص (25)؟",
+      "multipleCorrect": false,
+      "options": ["double", "int", "char", "string"],
+      "correct": 1,
+      "explanation": "Age is a whole number (no decimals), so int is the correct type.",
+      "explanationAr": "العمر عدد صحيح (بدون كسور)، لذا int هو النوع الصحيح.",
+      "points": 10
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which is a VALID variable name in C++?",
+      "promptAr": "أي اسم متغير صالح في C++؟",
+      "multipleCorrect": true,
+      "options": ["student_name", "2ndPlace", "my-variable", "_count", "total score"],
+      "correct": [0, 3],
+      "explanation": "Valid names start with letter or underscore. '2ndPlace' starts with number, 'my-variable' has hyphen, 'total score' has space.",
+      "explanationAr": "الأسماء الصالحة تبدأ بحرف أو شرطة سفلية. '2ndPlace' يبدأ برقم، 'my-variable' يحتوي على شرطة، 'total score' يحتوي على مسافة.",
+      "points": 10
+    },
+    {
+      "type": "find_line",
+      "prompt": "Which line has an error?",
+      "promptAr": "أي سطر يحتوي على خطأ؟",
+      "findWhat": "error",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int age = 25;\n    double price = 9.99;\n    char grade = \"A\";\n    string name = \"Ali\";\n    return 0;\n}",
+      "correctLine": 7,
+      "explanation": "Line 7 uses double quotes for char. Char must use single quotes: char grade = 'A';",
+      "explanationAr": "السطر 7 يستخدم علامات اقتباس مزدوجة لـ char. يجب استخدام علامات مفردة: char grade = 'A';",
+      "points": 10
+    },
+    {
+      "type": "code_write",
+      "prompt": "Write a program that creates variables for a product: name (string), price (double), quantity (int), and inStock (bool). Print them all.",
+      "promptAr": "اكتب برنامجاً ينشئ متغيرات لمنتج: الاسم (string)، السعر (double)، الكمية (int)، وفي المخزون (bool). اطبعهم جميعاً.",
+      "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Create your variables here\n    \n    \n    // Print them here\n    \n    \n    return 0;\n}",
+      "validation": {
+        "mustContain": ["string", "double", "int", "bool", "cout"],
+        "expectedOutput": null
+      },
+      "allowRun": true,
+      "explanation": "Create one variable of each type and print them using cout.",
+      "explanationAr": "أنشئ متغيراً من كل نوع واطبعهم باستخدام cout.",
+      "points": 15
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "Complete the variable declarations:",
+      "promptAr": "أكمل إعلانات المتغيرات:",
+      "code": "{0} age = 25;\n{1} temperature = 36.6;\n{2} initial = 'A';\n{3} name = \"Ahmed\";\n{4} isStudent = true;",
+      "blanks": [
+        {
+          "blankType": "text",
+          "answers": ["int"],
+          "placeholder": "whole number"
+        },
+        {
+          "blankType": "text",
+          "answers": ["double"],
+          "placeholder": "decimal"
+        },
+        {
+          "blankType": "text",
+          "answers": ["char"],
+          "placeholder": "single character"
+        },
+        {
+          "blankType": "text",
+          "answers": ["string"],
+          "placeholder": "text"
+        },
+        {
+          "blankType": "text",
+          "answers": ["bool"],
+          "placeholder": "true/false"
+        }
+      ],
+      "explanation": "int for whole numbers, double for decimals, char for single characters, string for text, bool for true/false.",
+      "explanationAr": "int للأعداد الصحيحة، double للكسور، char لحرف واحد، string للنص، bool لصحيح/خطأ.",
+      "points": 15
+    },
+    {
+      "type": "mcq",
+      "prompt": "What is the output of this code?\n\nint x = 5;\nx = x + 3;\nx = x * 2;\ncout << x;",
+      "promptAr": "ما ناتج هذا الكود؟\n\ncode shown above",
+      "multipleCorrect": false,
+      "options": ["5", "8", "16", "10"],
+      "correct": 2,
+      "explanation": "x starts at 5. x = 5+3 = 8. Then x = 8*2 = 16.",
+      "explanationAr": "x تبدأ بـ 5. x = 5+3 = 8. ثم x = 8*2 = 16.",
+      "points": 10
+    },
+    {
+      "type": "bug_hunter",
+      "prompt": "Find the error in this code that should print 30:",
+      "promptAr": "ابحث عن الخطأ في هذا الكود المفروض أن يطبع 30:",
+      "codeLines": [
+        "#include <iostream>",
+        "using namespace std;",
+        "",
+        "int main() {",
+        "    int x = 10;",
+        "    if (x = 10) {",
+        "        cout << x + 20 << endl;",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "correctLine": 6,
+      "explanation": "Line 6 uses = (assignment) instead of == (comparison). It should be: if (x == 10)",
+      "explanationAr": "السطر 6 يستخدم = (تعيين) بدلاً من == (مقارنة). يجب أن يكون: if (x == 10)",
+      "points": 10
+    },
+    {
+      "type": "order_lines",
+      "prompt": "Arrange to create a program that declares a variable, updates it, and prints it:",
+      "promptAr": "رتب لإنشاء برنامج يعلن متغيراً ويحدثه ويطبعه:",
+      "items": [
+        "cout << \"Final: \" << score << endl;",
+        "#include <iostream>",
+        "score = score + 50;",
+        "int score = 100;",
+        "using namespace std;",
+        "int main() {",
+        "return 0;",
+        "}"
+      ],
+      "validOrderings": [
+        ["#include <iostream>", "using namespace std;", "int main() {", "int score = 100;", "score = score + 50;", "cout << \"Final: \" << score << endl;", "return 0;", "}"]
+      ],
+      "explanation": "First declare the variable, then update it, then print the result.",
+      "explanationAr": "أولاً أعلن المتغير، ثم حدثه، ثم اطبع النتيجة.",
+      "points": 15
+    }
+  ]
+}

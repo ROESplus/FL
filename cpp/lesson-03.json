@@ -1,0 +1,203 @@
+{
+  "id": "lesson-03",
+  "type": "lesson",
+  "unit": "unit-01",
+  "lessonInUnit": 3,
+  "skill": "Understanding Program Structure",
+  "skillAr": "فهم بنية البرنامج",
+  "title": "Anatomy of a C++ Program",
+  "titleAr": "تشريح برنامج C++",
+  "sections": [
+    {
+      "content": "## The Blueprint of Every C++ Program\n\nThink of a C++ program like a **building blueprint**. Every building needs:\n- A **foundation** (includes)\n- A **main entrance** (main function)\n- **Rooms** (statements)\n- A **security system** (return statement)\n\nLet's dissect the Hello World program line by line:\n\n```cpp\n#include <iostream>      // 1. The Foundation\nusing namespace std;     // 2. The Address\n\nint main() {             // 3. The Main Entrance\n    cout << \"Hi!\" << endl;  // 4. A Room (statement)\n    return 0;            // 5. The Security Check\n}                        // 6. Closing the Building\n```\n\nEvery C++ program you'll ever write follows this exact structure. Master it now, and everything else becomes easy!",
+      "contentAr": "## المخطط الأساسي لكل برنامج C++\n\nفكر في برنامج C++ كـ **مخطط مبنى**. كل مبنى يحتاج:\n- **أساس** (التضمينات)\n- **مدخل رئيسي** (دالة main)\n- **غرف** (العبارات)\n- **نظام أمان** (عبارة return)\n\nلنشّرح برنامج مرحباً بالعالم سطراً بسطر:",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-program-anatomy.svg",
+          "alt": "Annotated diagram showing each part of a C++ program with labels",
+          "caption": "Every C++ program has these 6 essential parts",
+          "captionAr": "كل برنامج C++ يحتوي على هذه الأجزاء الأساسية الستة"
+        }
+      ],
+      "notes": [
+        {
+          "term": "#include",
+          "description": "Tells the compiler to include a library (like importing tools into your workshop)",
+          "ar": "#include: يخبر المترجم بتضمين مكتبة (مثل استيراد الأدوات إلى ورشتك)"
+        },
+        {
+          "term": "iostream",
+          "description": "Input/Output Stream library - provides cout and cin",
+          "ar": "iostream: مكتبة تدفق الإدخال/الإخراج - توفر cout و cin"
+        }
+      ]
+    },
+    {
+      "content": "## Line-by-Line Breakdown\n\n### Line 1: `#include <iostream>`\nThe **#include** directive tells the compiler: \"I need the iostream library.\"\n- **iostream** = **I**nput/**O**utput **Stream**\n- It gives us `cout` (print to screen) and `cin` (read from keyboard)\n- Without it, your program can't talk to the user!\n\n**Analogy**: It's like plugging in a power strip before using electrical devices.\n\n### Line 2: `using namespace std;`\nThis is a **shortcut**. Instead of writing `std::cout` every time, we just write `cout`.\n- **std** = **st**an**d**ard (the standard library)\n- Without this line, you'd write: `std::cout << \"Hello\" << std::endl;`\n- With this line, you write: `cout << \"Hello\" << endl;`\n\n**Analogy**: It's like saving a contact's number so you don't have to dial the full number every time.\n\n### Line 3: `int main() {`\nThis is the **entry point** - where every C++ program starts!\n- **int** = the function returns an integer\n- **main** = the name (must be exactly \"main\")\n- **()** = no parameters needed for now\n- **{** = opening brace (start of the function body)\n\n**Critical**: Without main(), your program won't run. Period.\n\n### Line 4: `cout << \"Hi!\" << endl;`\nThis **statement** does the actual work:\n- **cout** = console output (prints to screen)\n- **<<** = the \"insertion operator\" (sends data to cout)\n- **\"Hi!\"** = the text to print\n- **endl** = end line (moves to next line)\n- **;** = end of statement\n\n### Line 5: `return 0;`\nThis tells the operating system: \"Everything went well!\"\n- **0** = success\n- **Non-zero** = something went wrong\n- It's like a doctor saying \"Patient is healthy\" at the end of a checkup.",
+      "contentAr": "## شرح سطراً بسطر",
+      "code": "// Complete annotated program:\n\n#include <iostream>      // Include the I/O library\nusing namespace std;     // Use standard namespace (shortcut)\n\nint main() {             // Program starts here\n    \n    // This line prints text to the screen\n    cout << \"Hello from C++!\" << endl;\n    \n    // This line prints a number\n    cout << \"The answer is: \" << 42 << endl;\n    \n    // This line prints multiple things\n    cout << \"Name: \" << \"Student\" << \", Age: \" << 20 << endl;\n    \n    return 0;            // Program ended successfully\n}",
+      "reminder": "Think of main() as the front door of your program. Every program must have exactly one front door!",
+      "reminderAr": "فكر في main() كالباب الأمامي لبرنامجك. كل برنامج يجب أن يكون له باب أمامي واحد بالضبط!"
+    },
+    {
+      "content": "## The cout Operator: Your Printing Machine\n\nThe `<<` operator is like a **conveyor belt** in a factory. It carries items to `cout` one by one:\n\n```cpp\ncout << \"Hello\" << \" \" << \"World\" << endl;\n```\n\nThis is like putting items on a conveyor belt:\n- Item 1: \"Hello\"\n- Item 2: \" \" (a space)\n- Item 3: \"World\"\n- Item 4: endl (new line)\n\nAll items get printed in order!\n\n### You Can Print Anything:\n```cpp\ncout << \"Text\" << endl;        // Text\ncout << 42 << endl;            // Numbers\ncout << 3.14 << endl;          // Decimals\ncout << \"Mix: \" << 42 << endl; // Mixed!\n```\n\n### Common Mistake: Forgetting <<\n```cpp\ncout \"Hello\" << endl;    // ❌ Missing << after cout\ncout << \"Hello\" << endl; // ✅ Correct\n```",
+      "contentAr": "## معامل cout: آلة الطباعة الخاصة بك",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Printing different types\n    cout << \"=== Printing Different Types ===\" << endl;\n    cout << \"Text: Hello World\" << endl;\n    cout << \"Number: \" << 42 << endl;\n    cout << \"Decimal: \" << 3.14 << endl;\n    cout << \"Mixed: \" << \"Age \" << 25 << \" years\" << endl;\n    \n    cout << endl;\n    \n    // The conveyor belt analogy\n    cout << \"This \" << \"is \" << \"a \" << \"conveyor \" << \"belt!\" << endl;\n    \n    return 0;\n}",
+      "diagrams": [
+        {
+          "src": "diagrams/cpp-cout-conveyor.svg",
+          "alt": "Conveyor belt diagram showing items being sent to cout one by one",
+          "caption": "The << operator carries items to cout like a conveyor belt",
+          "captionAr": "المعامل << يحمل العناصر إلى cout مثل الحزام الناقل"
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "title": "Complete Annotated Program",
+      "titleAr": "برنامج كامل مع تعليقات",
+      "description": "Every line explained with comments",
+      "descriptionAr": "كل سطر مشروح بتعليقات",
+      "code": "// This is a comment - the compiler ignores it\n// Comments help humans understand the code\n\n#include <iostream>  // Include Input/Output library\nusing namespace std; // Use standard namespace\n\nint main() {         // Main function - program starts here\n    \n    // Print a greeting\n    cout << \"Welcome to C++!\" << endl;\n    \n    // Print some numbers\n    cout << \"1 + 1 = \" << 1 + 1 << endl;\n    \n    // Print multiple items\n    cout << \"C++\" << \" is \" << \"awesome!\" << endl;\n    \n    return 0;        // Program finished successfully\n}",
+      "runnable": true,
+      "expectedOutput": "Welcome to C++!\n1 + 1 = 2\nC++ is awesome!"
+    },
+    {
+      "title": "Comments: Notes for Humans",
+      "titleAr": "التعليقات: ملاحظات للبشر",
+      "description": "Comments are ignored by the compiler but help programmers understand code",
+      "descriptionAr": "التعليقات يتجاهلها المترجم لكنها تساعد المبرمجين على فهم الكود",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // This is a single-line comment\n    cout << \"Comments are invisible to the computer\" << endl;\n    \n    /* This is a\n       multi-line comment\n       spanning several lines */\n    cout << \"Use comments to explain your code!\" << endl;\n    \n    // You can also comment out code:\n    // cout << \"This won't print\" << endl;\n    \n    cout << \"Only this line prints!\" << endl;\n    \n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Comments are invisible to the computer\nUse comments to explain your code!\nOnly this line prints!"
+    },
+    {
+      "title": "The endl vs \\n Difference",
+      "titleAr": "الفرق بين endl و \\n",
+      "description": "Two ways to create a new line",
+      "descriptionAr": "طريقتان لإنشاء سطر جديد",
+      "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Method 1: Using endl\n    cout << \"Line 1\" << endl;\n    cout << \"Line 2\" << endl;\n    \n    // Method 2: Using \\n (faster!)\n    cout << \"Line 3\\n\";\n    cout << \"Line 4\\n\";\n    \n    // Method 3: Multiple \\n in one cout\n    cout << \"Line 5\\nLine 6\\nLine 7\\n\";\n    \n    return 0;\n}",
+      "runnable": true,
+      "expectedOutput": "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\nLine 6\nLine 7"
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "What does #include <iostream> do?",
+      "promptAr": "ماذا يفعل #include <iostream>؟",
+      "multipleCorrect": false,
+      "options": [
+        "Prints text to the screen",
+        "Includes the Input/Output library",
+        "Creates the main function",
+        "Ends the program"
+      ],
+      "correct": 1,
+      "explanation": "#include <iostream> tells the compiler to include the iostream library, which provides cout and cin.",
+      "explanationAr": "#include <iostream> يخبر المترجم بتضمين مكتبة iostream التي توفر cout و cin.",
+      "points": 10
+    },
+    {
+      "type": "mcq",
+      "prompt": "What is the purpose of 'using namespace std;'?",
+      "promptAr": "ما الغرض من 'using namespace std;'؟",
+      "multipleCorrect": false,
+      "options": [
+        "It creates variables",
+        "It's a shortcut so we don't write std:: before cout, cin, endl",
+        "It ends the program",
+        "It includes libraries"
+      ],
+      "correct": 1,
+      "explanation": "using namespace std; lets us write cout instead of std::cout, making code shorter.",
+      "explanationAr": "using namespace std; تتيح لنا كتابة cout بدلاً من std::cout، مما يجعل الكود أقصر.",
+      "points": 10
+    },
+    {
+      "type": "find_line",
+      "prompt": "Which line is missing in this program that prevents it from compiling?",
+      "promptAr": "أي سطر مفقود في هذا البرنامج يمنعه من الترجمة؟",
+      "findWhat": "error",
+      "code": "#include <iostream>\nusing namespace std;\n\n{\n    cout << \"Hello\" << endl;\n    return 0;\n}",
+      "correctLine": 4,
+      "explanation": "Line 4 should be 'int main() {' not just '{'. The main function declaration is missing.",
+      "explanationAr": "السطر 4 يجب أن يكون 'int main() {' وليس فقط '{'. إعلان دالة main مفقود.",
+      "points": 10
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "Complete the basic structure of a C++ program:",
+      "promptAr": "أكمل البنية الأساسية لبرنامج C++:",
+      "code": "{0} <iostream>\nusing namespace {1};\n\nint {2}() {\n    cout << \"Hello!\" << endl;\n    return {3};\n}",
+      "blanks": [
+        {
+          "blankType": "text",
+          "answers": ["#include"],
+          "placeholder": "directive"
+        },
+        {
+          "blankType": "text",
+          "answers": ["std"],
+          "placeholder": "namespace"
+        },
+        {
+          "blankType": "text",
+          "answers": ["main"],
+          "placeholder": "function name"
+        },
+        {
+          "blankType": "dropdown",
+          "options": ["0", "1", "true", "endl"],
+          "answers": ["0"]
+        }
+      ],
+      "explanation": "#include includes libraries, std is the standard namespace, main is the entry point, return 0 means success.",
+      "explanationAr": "#include تضمن المكتبات، std هي مساحة الاسم القياسية، main هي نقطة الدخول، return 0 تعني نجاح.",
+      "points": 15
+    },
+    {
+      "type": "mcq",
+      "prompt": "What does 'return 0;' at the end of main() mean?",
+      "promptAr": "ماذا تعني 'return 0;' في نهاية main()؟",
+      "multipleCorrect": false,
+      "options": [
+        "Print the number 0",
+        "The program ended successfully",
+        "The program has 0 errors",
+        "Restart the program"
+      ],
+      "correct": 1,
+      "explanation": "return 0; tells the operating system that the program finished without errors.",
+      "explanationAr": "return 0; تخبر نظام التشغيل أن البرنامج انتهى بدون أخطاء.",
+      "points": 10
+    },
+    {
+      "type": "build_code",
+      "prompt": "Build a complete C++ program that prints 'C++ is great!':",
+      "promptAr": "ابنِ برنامج C++ كامل يطبع 'C++ is great!':",
+      "blocks": [
+        { "id": 1, "text": "#include", "type": "keyword" },
+        { "id": 2, "text": "<iostream>", "type": "bracket" },
+        { "id": 3, "text": "using namespace std;", "type": "statement" },
+        { "id": 4, "text": "int main() {", "type": "function" },
+        { "id": 5, "text": "cout", "type": "function" },
+        { "id": 6, "text": "<<", "type": "operator" },
+        { "id": 7, "text": "\"C++ is great!\"", "type": "string" },
+        { "id": 8, "text": "<<", "type": "operator" },
+        { "id": 9, "text": "endl;", "type": "statement" },
+        { "id": 10, "text": "return 0;", "type": "statement" },
+        { "id": 11, "text": "}", "type": "bracket" },
+        { "id": 12, "text": "if", "type": "keyword" },
+        { "id": 13, "text": "while", "type": "keyword" }
+      ],
+      "correctOrder": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "minRequired": 11,
+      "maxRequired": 11,
+      "explanation": "Use all blocks except 'if' and 'while' which are distractors.",
+      "explanationAr": "استخدم كل اللبنات ما عدا 'if' و 'while' فهي لبنات مضللة.",
+      "points": 15
+    }
+  ]
+}
